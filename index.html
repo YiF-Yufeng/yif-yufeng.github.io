@@ -3,31 +3,509 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>YiF | Yufeng Zhou</title>
-  <style>
-    body {
-      max-width: 760px;
-      margin: 100px auto;
-      padding: 0 24px;
-      font-family: Arial, sans-serif;
-      line-height: 1.8;
-      color: #222;
-    }
-    h1 { font-size: 36px; }
-    a { color: #356ac3; text-decoration: none; }
-  </style>
+  <meta name="description" content="Yufeng Zhou (周宇峰) — Ph.D. candidate in Atmospheric Science at Tsinghua University, studying tropical cyclone frequency, climate dynamics, and convective organization.">
+  <meta name="author" content="Yufeng Zhou">
+  <title>Yufeng Zhou (周宇峰) | Ph.D. Candidate, Atmospheric Science</title>
+
+  <!-- 样式表：所有外观样式都在 style.css 中维护 -->
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <h1>Yufeng Zhou</h1>
-  <p>YiF</p>
-  <p>PhD Student in Atmospheric Science</p>
-  <p>
-    My research focuses on tropical cyclones,
-    climate dynamics, and tropical convection.
-  </p>
-  <h2>Research</h2>
-  <p>Research interests and publications coming soon.</p>
-  <h2>Contact</h2>
-  <p> Email: your-email@example.com </p>
+
+  <!-- ============================================================
+       顶部导航栏 NAVBAR
+       说明：新增/删除一个栏目时，在这里加/删一个 <li><a> 即可。
+       同时要确保 <a href="#id"> 与下方对应区块的 id 一致。
+       ============================================================ -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="nav-brand" href="#top">Yufeng&nbsp;Zhou</a>
+
+      <!-- 移动端汉堡按钮（由底部 JS 控制展开/收起） -->
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-menu" id="nav-menu">
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#research">Research</a>
+        <a class="nav-link" href="#publications">Publications</a>
+        <a class="nav-link" href="#presentations">Presentations</a>
+        <a class="nav-link" href="#awards">Awards</a>
+        <a class="nav-link" href="#notes">Notes</a>
+        <a class="nav-link" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       主页顶部 HERO：姓名、头衔、照片、联系方式
+       说明：修改姓名/头衔/邮箱/链接都直接改下面的文字即可。
+       照片文件是 photo.jpg，替换时用同名文件覆盖即可。
+       ============================================================ -->
+  <section class="hero" id="top">
+    <div class="container hero-inner">
+
+      <div class="hero-photo">
+        <!-- 个人照片：直接替换 photo.jpg 即可 -->
+        <img src="photo.jpg" alt="Portrait of Yufeng Zhou">
+      </div>
+
+      <div class="hero-text">
+        <h1>Yufeng Zhou <span class="hero-zh">周宇峰</span></h1>
+        <p class="hero-role">Ph.D. Candidate in Atmospheric Science</p>
+        <p class="hero-affil">
+          Department of Earth System Science, Tsinghua University<br>
+          Beijing, China
+        </p>
+
+        <!-- 联系方式图标按钮：新增一个链接就复制一行 <a class="hero-link"> 即可 -->
+        <div class="hero-links">
+          <a class="hero-link" href="mailto:zyf21@mails.tsinghua.edu.cn" title="Email">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <span>Email</span>
+          </a>
+          <a class="hero-link" href="https://www.researchgate.net/profile/Yufeng-Zhou-11" target="_blank" rel="noopener" title="ResearchGate">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h10a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm3 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm0 5c-1.1 0-2 .9-2 2v2h4v-2c0-1.1-.9-2-2-2zm5.5-5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7z"/></svg>
+            <span>ResearchGate</span>
+          </a>
+          <a class="hero-link" href="https://github.com/yif-yufeng" target="_blank" rel="noopener" title="GitHub">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2.17c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.34.95.1-.74.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.59.23 2.76.11 3.05.73.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.25 5.66.41.35.77 1.05.77 2.12v3.14c0 .31.21.68.8.56A10.5 10.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+            <span>GitHub</span>
+          </a>
+          <!--
+            如需添加 Google Scholar / ORCID，取消注释下面两行并填入你的链接：
+          <a class="hero-link" href="YOUR_GOOGLE_SCHOLAR_URL" target="_blank" rel="noopener" title="Google Scholar">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
+            <span>Scholar</span>
+          </a>
+          <a class="hero-link" href="YOUR_ORCID_URL" target="_blank" rel="noopener" title="ORCID">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm0 2v12h16V6H4zm5 2h6v2H9V8zm0 4h6v2H9v-2z"/></svg>
+            <span>ORCID</span>
+          </a>
+          -->
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       区块：ABOUT 关于我（含教育经历）
+       说明：修改自我介绍段落，以及下面的教育经历时间线。
+       ============================================================ -->
+  <section class="section" id="about">
+    <div class="container">
+      <h2 class="section-title">About</h2>
+      <p class="lead">
+        I am a Ph.D. candidate in the Department of Earth System Science at Tsinghua University,
+        advised by <a href="#"><span class="hl">Prof. Yanluan Lin</span></a>. My research focuses on identifying the
+        physical constraints that govern tropical cyclone frequency and understanding its response
+        to climate change. Beyond this, I am broadly interested in multiscale climate dynamics,
+        extreme weather, idealized modeling, and complex-system perspectives on the Earth system.
+      </p>
+      <p>
+        I enjoy identifying and discovering emerging patterns in complex climate systems, and
+        proposing novel mathematical and physical approaches to address fundamental questions in
+        atmospheric and climate sciences.
+      </p>
+
+      <!-- 教育经历时间线：新增一条就复制一个 <div class="edu-item"> -->
+      <h3 class="sub-title">Education</h3>
+      <div class="edu-list">
+        <div class="edu-item">
+          <div class="edu-date">Aug 2021 – present<br><span class="muted">expected Dec 2026</span></div>
+          <div class="edu-body">
+            <strong>Ph.D. in Atmospheric Science</strong>
+            <p>Department of Earth System Science, Tsinghua University · Advisor: Prof. Yanluan Lin</p>
+          </div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-date">Aug 2017 – Jun 2021</div>
+          <div class="edu-body">
+            <strong>B.Eng. in Engineering Physics</strong>
+            <p>Department of Engineering Physics, Tsinghua University</p>
+          </div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-date">Aug 2018 – Jun 2021</div>
+          <div class="edu-body">
+            <strong>Minor in Statistics</strong>
+            <p>Department of Industrial Engineering, Tsinghua University</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       区块：RESEARCH 研究方向 + 研究亮点
+       说明：兴趣标签和亮点卡片都可以自由增删。
+       ============================================================ -->
+  <section class="section section-alt" id="research">
+    <div class="container">
+      <h2 class="section-title">Research</h2>
+
+      <!-- 研究兴趣标签：加一个就复制一个 <span class="tag"> -->
+      <div class="tags">
+        <span class="tag">Tropical cyclones</span>
+        <span class="tag">Climate dynamics</span>
+        <span class="tag">Convective organization</span>
+        <span class="tag">Extreme weather</span>
+        <span class="tag">Idealized modeling</span>
+        <span class="tag">Complex systems</span>
+      </div>
+
+      <!-- 研究亮点卡片：增删一条就复制/删除一个 <article class="card"> -->
+      <h3 class="sub-title">Research Highlights</h3>
+      <div class="cards">
+        <article class="card">
+          <h4>A Spatiotemporal Packing Framework for Tropical Cyclone Frequency <span class="card-tag">Dissertation</span></h4>
+          <p>
+            Proposes a framework showing that global tropical cyclone frequency emerges from the
+            spatiotemporal packing and self-organization of the tropical climate system under finite
+            environmental constraints — linking spatial convective organization, genesis interval
+            statistics, and TC lifecycle effects.
+          </p>
+        </article>
+        <article class="card">
+          <h4>Information-Theoretic Quantification of Tropical Convective Organization</h4>
+          <p>
+            Develops an entropy-based Hierarchical Organization Index (HOI) and a dual-metric framework
+            integrating size hierarchy and spatial clustering. Identifies an adaptive structure-optimal
+            infrared brightness temperature threshold and its long-term cooling trend, revealing
+            systematic structural changes in tropical convection.
+          </p>
+        </article>
+        <article class="card">
+          <h4>Climate-Driven Changes in Tropical Cyclone Characteristics</h4>
+          <p>
+            Reveals changes in TC intensity, air-sea interaction, and motion variability by decomposing
+            lifetime maximum intensity into intensification rate and duration, quantifying the weakening
+            of TC-induced ocean cooling, and identifying increasing track curvature.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       区块：PUBLICATIONS 发表论文
+       说明：新增一篇论文时，复制一个 <li class="pub"> 整块。
+       - status-published / status-submitted / status-prep 对应三种状态标签。
+       - 已发表论文的标题请包上 <a href="https://doi.org/..."> 链接；
+         未发表/在投的去掉 <a> 链接即可。
+       - 用 <strong> 标出自己的名字。
+       ============================================================ -->
+  <section class="section" id="publications">
+    <div class="container">
+      <h2 class="section-title">Publications</h2>
+
+      <h3 class="sub-title">First-Author Publications</h3>
+      <ol class="pub-list">
+
+        <li class="pub">
+          <div class="pub-main">
+            <a class="pub-title" href="https://doi.org/10.1029/2026MS005814" target="_blank" rel="noopener">
+              A Hierarchical Organization Index for Tropical Convection across Models and Observations
+            </a>
+            <p class="pub-authors"><strong>Zhou, Y.</strong>, Dong, W., &amp; Lin, Y.</p>
+            <p class="pub-venue">Journal of Advances in Modeling Earth Systems, 18, e2026MS005814 (2026)</p>
+          </div>
+          <span class="pub-status status-published">Published</span>
+        </li>
+
+        <li class="pub">
+          <div class="pub-main">
+            <a class="pub-title" href="https://doi.org/10.1038/s41612-025-01295-3" target="_blank" rel="noopener">
+              Shortened intensification duration offsets the increase of tropical cyclone lifetime maximum intensity
+            </a>
+            <p class="pub-authors"><strong>Zhou, Y.</strong>, &amp; Lin, Y.</p>
+            <p class="pub-venue">npj Climate and Atmospheric Science, 9, 22 (2026)</p>
+          </div>
+          <span class="pub-status status-published">Published</span>
+        </li>
+
+        <li class="pub">
+          <div class="pub-main">
+            <a class="pub-title" href="https://doi.org/10.1038/s41612-025-01300-9" target="_blank" rel="noopener">
+              Shrinking cold wakes accelerate tropical cyclone intensification in recent decades
+            </a>
+            <p class="pub-authors"><strong>Zhou, Y.</strong>, Shan, K., &amp; Lin, Y.</p>
+            <p class="pub-venue">npj Climate and Atmospheric Science, 9, 25 (2026)</p>
+          </div>
+          <span class="pub-status status-published">Published</span>
+        </li>
+
+        <li class="pub">
+          <div class="pub-main">
+            <a class="pub-title" href="https://doi.org/10.1029/2024EF004839" target="_blank" rel="noopener">
+              A toy model for the global annual number of tropical cyclones
+            </a>
+            <p class="pub-authors"><strong>Zhou, Y.</strong>, &amp; Lin, Y.</p>
+            <p class="pub-venue">Earth's Future, 12, e2024EF004839 (2024)</p>
+          </div>
+          <span class="pub-status status-published">Published</span>
+        </li>
+
+        <li class="pub">
+          <div class="pub-main">
+            <span class="pub-title">An Information-Theoretic Approach Reveals Evolving Infrared Brightness Temperature Thresholds for Tropical Convection</span>
+            <p class="pub-authors"><strong>Zhou, Y.</strong>, Dong, W., &amp; Lin, Y.</p>
+            <p class="pub-venue">Submitted to Journal of Geophysical Research: Atmospheres (2026)</p>
+          </div>
+          <span class="pub-status status-submitted">Submitted</span>
+        </li>
+
+        <li class="pub">
+          <div class="pub-main">
+            <span class="pub-title">Temporal Organization of Tropical Cyclone Genesis: Linking Frequency to Inter-Event Time Statistics</span>
+            <p class="pub-authors"><strong>Zhou, Y.</strong>, &amp; Lin, Y.</p>
+            <p class="pub-venue">In preparation (2026)</p>
+          </div>
+          <span class="pub-status status-prep">In preparation</span>
+        </li>
+
+        <li class="pub">
+          <div class="pub-main">
+            <span class="pub-title">Observed Increase in Global Tropical Cyclone Track Curvature and Short-Term Motion Variability</span>
+            <p class="pub-authors"><strong>Zhou, Y.</strong>, &amp; Lin, Y.</p>
+            <p class="pub-venue">In preparation (2026)</p>
+          </div>
+          <span class="pub-status status-prep">In preparation</span>
+        </li>
+
+      </ol>
+
+      <h3 class="sub-title">Co-Authored Publications</h3>
+      <ol class="pub-list">
+
+        <li class="pub">
+          <div class="pub-main">
+            <a class="pub-title" href="https://doi.org/10.1007/s13351-027-6113-1" target="_blank" rel="noopener">
+              Tropical cyclones cool the climate compared with regular convection
+            </a>
+            <p class="pub-authors">Lin, Y., Zhang, J., <strong>Zhou, Y.</strong>, &amp; Zhang, M.</p>
+            <p class="pub-venue">Journal of Meteorological Research, 40(6), 1–12 (2026)</p>
+          </div>
+          <span class="pub-status status-published">Published</span>
+        </li>
+
+        <li class="pub">
+          <div class="pub-main">
+            <a class="pub-title" href="https://doi.org/10.1029/2025GL121284" target="_blank" rel="noopener">
+              Drying effect of landfalling tropical cyclones
+            </a>
+            <p class="pub-authors">Yang, Y., Ma, Z., Lin, Y., <strong>Zhou, Y.</strong>, &amp; Fei, J.</p>
+            <p class="pub-venue">Geophysical Research Letters, 53, e2025GL121284 (2026)</p>
+          </div>
+          <span class="pub-status status-published">Published</span>
+        </li>
+
+        <li class="pub">
+          <div class="pub-main">
+            <a class="pub-title" href="https://doi.org/10.1029/2025GL115918" target="_blank" rel="noopener">
+              Abrupt decrease in tropical cyclone lifetime-maximum size in the western North Pacific since the late 20th century
+            </a>
+            <p class="pub-authors">Wang, C., Shan, K., <strong>Zhou, Y.</strong>, Lin, Y., &amp; Yu, X.</p>
+            <p class="pub-venue">Geophysical Research Letters, 52, e2025GL115918 (2025)</p>
+          </div>
+          <span class="pub-status status-published">Published</span>
+        </li>
+
+        <li class="pub">
+          <div class="pub-main">
+            <span class="pub-title">Compound climate hazards erode energy-system resilience through transmission infrastructure</span>
+            <p class="pub-authors">Sun, Y., Wei, W., Yu, Y., Lu, H., Zhang, N., Jian, Y., Gesang, Y., Debnath, R., Davis, S., <strong>Zhou, Y.</strong>, Zhang, Q., &amp; He, K.</p>
+            <p class="pub-venue">Submitted to Nature Energy (2026)</p>
+          </div>
+          <span class="pub-status status-submitted">Submitted</span>
+        </li>
+
+        <li class="pub">
+          <div class="pub-main">
+            <span class="pub-title">Global warming amplifies coastal risks in East Asia as tropical cyclones strike farther north and slow down</span>
+            <p class="pub-authors">Wu, T., <strong>Zhou, Y.</strong>, Lin, Y., Duan, Z., Zhao, H., &amp; Shan, K.</p>
+            <p class="pub-venue">In preparation (2026)</p>
+          </div>
+          <span class="pub-status status-prep">In preparation</span>
+        </li>
+
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       区块：PRESENTATIONS 会议报告
+       说明：新增一条就复制一个 <li class="talk">。
+       ============================================================ -->
+  <section class="section section-alt" id="presentations">
+    <div class="container">
+      <h2 class="section-title">Conference Presentations</h2>
+      <ul class="talk-list">
+        <li class="talk">
+          <div class="talk-main">
+            <p class="talk-title">The Role of Intensification Duration in Shaping Tropical Cyclone Lifetime Maximum Intensity Distribution</p>
+            <p class="talk-meta"><strong>Zhou, Y.</strong>, &amp; Lin, Y. · AOGS 2025 Annual Meeting, Singapore</p>
+          </div>
+          <span class="talk-kind">Oral</span>
+        </li>
+        <li class="talk">
+          <div class="talk-main">
+            <p class="talk-title">A Toy Model for the Global Annual Number of Tropical Cyclones</p>
+            <p class="talk-meta"><strong>Zhou, Y.</strong>, &amp; Lin, Y. · 36th AMS Conference on Hurricanes and Tropical Meteorology, Long Beach, CA, USA</p>
+          </div>
+          <span class="talk-kind talk-award">Best Student Poster Award</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       区块：AWARDS 荣誉奖励 + 学术服务
+       说明：荣誉列表新增就复制一个 <li>；审稿与助教也可在此增删。
+       ============================================================ -->
+  <section class="section" id="awards">
+    <div class="container">
+      <h2 class="section-title">Honors &amp; Awards</h2>
+      <ul class="award-list">
+        <li>
+          <span class="award-name">National Scholarship for Doctoral Students</span>
+          <span class="award-meta">Ministry of Education · 2024</span>
+        </li>
+        <li>
+          <span class="award-name">Tsinghua University Comprehensive Scholarship</span>
+          <span class="award-meta">2022, 2023, 2025</span>
+        </li>
+        <li>
+          <span class="award-name">Best Student Poster Award</span>
+          <span class="award-meta">36th AMS Conference on Hurricanes and Tropical Meteorology · 2024</span>
+        </li>
+        <li>
+          <span class="award-name">Founder &amp; First President, Tsinghua University Student Association of Meteorology</span>
+          <span class="award-meta">2021 – 2025</span>
+        </li>
+      </ul>
+
+      <h3 class="sub-title">Academic Service</h3>
+      <ul class="service-list">
+        <li>
+          <strong>Journal Reviewer:</strong> Geophysical Research Letters, Journal of Climate,
+          Communications Earth &amp; Environment, npj Climate and Atmospheric Science.
+        </li>
+        <li>
+          <strong>Teaching Assistant:</strong> Introduction to Meteorology (Prof. Yanluan Lin &amp;
+          Assoc. Prof. Yiran Peng, 2021–2022); Advanced Synoptic Meteorology (Prof. Yanluan Lin, 2024–2025).
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       区块：NOTES 想法与思考（可当作博客用）
+       说明：这是"分享想法、交流讨论"的地方。
+       新增一篇文章：复制一个 <article class="note"> 整块即可。
+       若要变成独立博客页，可把这里的每篇文章单独做成 notes/xxx.html，
+       然后把下面 <a href="#"> 换成对应的链接。
+       ============================================================ -->
+  <section class="section section-alt" id="notes">
+    <div class="container">
+      <h2 class="section-title">Notes &amp; Ideas</h2>
+      <p class="lead">
+        I occasionally write short notes on research ideas, methods, and thoughts on the climate
+        system. If anything resonates — or doesn't — feel free to
+        <a href="#contact" class="hl">reach out for a discussion</a>.
+      </p>
+
+      <div class="note-list">
+
+        <!-- 示例文章 1：替换标题/日期/摘要即可 -->
+        <article class="note">
+          <h4><a href="#">Why does the global number of tropical cyclones hover around 90 per year?</a></h4>
+          <p class="note-date">Example post — replace with your own</p>
+          <p>
+            A brief thought on how a finite "carrying capacity" of the tropical atmosphere might
+            naturally set an upper bound on TC frequency — and what a packing perspective implies
+            for its climate sensitivity.
+          </p>
+        </article>
+
+        <!-- 示例文章 2 -->
+        <article class="note">
+          <h4><a href="#">Quantifying convective organization with information theory</a></h4>
+          <p class="note-date">Example post — replace with your own</p>
+          <p>
+            Notes on building a Hierarchical Organization Index: why entropy plus spatial clustering
+            captures structure that single metrics miss, and how to choose a robust brightness
+            temperature threshold.
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       区块：CONTACT 联系方式
+       说明：修改邮箱或添加其他联系方式即可。
+       ============================================================ -->
+  <section class="section" id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <p class="lead">The best way to reach me is by email. I'm always happy to discuss science.</p>
+      <p class="contact-line">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        <a href="mailto:zyf21@mails.tsinghua.edu.cn">zyf21@mails.tsinghua.edu.cn</a>
+      </p>
+      <p class="contact-line">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+        Department of Earth System Science, Tsinghua University, Beijing, China
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       页脚 FOOTER
+       ============================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year">2026</span> Yufeng Zhou · Built with plain HTML &amp; CSS</p>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       页面脚本：移动端导航开关 + 滚动高亮当前栏目
+       一般无需修改。
+       ============================================================ -->
+  <script>
+    // 移动端汉堡按钮：展开/收起导航菜单
+    var toggle = document.getElementById('nav-toggle');
+    var menu = document.getElementById('nav-menu');
+    toggle.addEventListener('click', function () {
+      var open = menu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+    // 点击菜单项后自动收起（移动端体验）
+    menu.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () { menu.classList.remove('open'); });
+    });
+
+    // 滚动时高亮导航中当前所在区块
+    var navLinks = document.querySelectorAll('.nav-link');
+    var sections = document.querySelectorAll('section[id]');
+    window.addEventListener('scroll', function () {
+      var current = '';
+      sections.forEach(function (s) {
+        if (window.scrollY >= s.offsetTop - 120) current = s.getAttribute('id');
+      });
+      navLinks.forEach(function (a) {
+        a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+      });
+    });
+
+    // 页脚年份自动更新
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
