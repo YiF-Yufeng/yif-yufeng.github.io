@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="News, conferences, honors, and academic service of Yufeng Zhou.">
+  <title>Activity · Yufeng Zhou</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+  <!-- 顶部导航（当前页 Activity 高亮） -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="nav-brand" href="../index.html">Yufeng&nbsp;Zhou</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-menu" id="nav-menu">
+        <a class="nav-link" href="research.html">Research</a>
+        <a class="nav-link" href="publications.html">Publications</a>
+        <a class="nav-link active" href="activity.html">Activity</a>
+        <a class="nav-link" href="thinking.html">Thinking</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 页头 -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Activity</h1>
+      <p class="page-desc">News, conferences, honors, and academic service.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+
+      <!-- ============================================================
+           会议报告（按时间倒序，最新在前）
+           说明：新增一条就复制一个 <li class="talk"> 整块，放到列表最前。
+           ============================================================ -->
+      <h2 class="sub-title">Conferences &amp; Talks</h2>
+      <ul class="talk-list">
+        <li class="talk">
+          <div class="talk-main">
+            <p class="talk-title">基于信息熵的热带对流层级组织指数（HOI）及其在模式与观测中的应用</p>
+            <p class="talk-meta">第八届全国中尺度气象学论坛（成都）· 口头报告 · 2026-08</p>
+          </div>
+          <span class="talk-kind">Oral</span>
+        </li>
+        <li class="talk">
+          <div class="talk-main">
+            <p class="talk-title">基于时空填充的全球台风年频数的模型</p>
+            <p class="talk-meta">应用数学和人工智能方法与地球系统复杂性研究学术研讨会（北京）· 口头报告 · 2025-12</p>
+          </div>
+          <span class="talk-kind">Oral</span>
+        </li>
+        <li class="talk">
+          <div class="talk-main">
+            <p class="talk-title">The Role of Intensification Duration in Shaping Tropical Cyclone Lifetime Maximum Intensity Distribution</p>
+            <p class="talk-meta">AOGS 2025 Annual Meeting (Singapore) · Oral Presentation · 2025-07</p>
+          </div>
+          <span class="talk-kind">Oral</span>
+        </li>
+        <li class="talk">
+          <div class="talk-main">
+            <p class="talk-title">基于时空填充的全球台风年频数的模型</p>
+            <p class="talk-meta">第一届未来大气科学论坛（北京）· 口头报告 · 2025-04</p>
+          </div>
+          <span class="talk-kind">Oral</span>
+        </li>
+        <li class="talk">
+          <div class="talk-main">
+            <p class="talk-title">全球热带气旋频数的模型</p>
+            <p class="talk-meta">第六届全国中尺度气象学论坛（珠海）· 口头报告 · 2024-11</p>
+          </div>
+          <span class="talk-kind">Oral</span>
+        </li>
+        <li class="talk">
+          <div class="talk-main">
+            <p class="talk-title">A Toy Model for the Global Annual Number of Tropical Cyclones</p>
+            <p class="talk-meta">36th AMS Conference on Hurricanes and Tropical Meteorology (Long Beach, USA) · Poster · 2024-05</p>
+          </div>
+          <span class="talk-kind talk-award">Best Student Poster Award</span>
+        </li>
+      </ul>
+
+      <!-- ============================================================
+           荣誉奖励
+           说明：新增一条就复制一个 <li>。
+           ============================================================ -->
+      <h2 class="sub-title">Honors &amp; Awards</h2>
+      <ul class="award-list">
+        <li>
+          <span class="award-name">National Scholarship for Doctoral Students</span>
+          <span class="award-meta">Ministry of Education · 2024</span>
+        </li>
+        <li>
+          <span class="award-name">Tsinghua University Comprehensive Scholarship</span>
+          <span class="award-meta">2022, 2023, 2025</span>
+        </li>
+        <li>
+          <span class="award-name">Best Student Poster Award</span>
+          <span class="award-meta">36th AMS Conference on Hurricanes and Tropical Meteorology · 2024</span>
+        </li>
+        <li>
+          <span class="award-name">Founder &amp; First President, Tsinghua University Student Association of Meteorology</span>
+          <span class="award-meta">2021 – 2025</span>
+        </li>
+      </ul>
+
+      <!-- ============================================================
+           学术服务
+           ============================================================ -->
+      <h2 class="sub-title">Academic Service</h2>
+      <ul class="service-list">
+        <li>
+          <strong>Journal Reviewer:</strong> Geophysical Research Letters, Journal of Climate,
+          Communications Earth &amp; Environment, npj Climate and Atmospheric Science,
+          Journal of Geophysical Research: Atmospheres.
+        </li>
+        <li>
+          <strong>Teaching Assistant:</strong> Introduction to Meteorology (Prof. Yanluan Lin &amp;
+          Assoc. Prof. Yiran Peng, 2021–2022); Advanced Synoptic Meteorology (Prof. Yanluan Lin, 2024–2025).
+        </li>
+      </ul>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year">2026</span> Yufeng Zhou ·
+        <a href="mailto:zyf21@mails.tsinghua.edu.cn">zyf21@mails.tsinghua.edu.cn</a></p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('nav-toggle').addEventListener('click', function () {
+      var m = document.getElementById('nav-menu');
+      var o = m.classList.toggle('open');
+      this.setAttribute('aria-expanded', o);
+    });
+    document.querySelectorAll('#nav-menu a').forEach(function (a) {
+      a.addEventListener('click', function () { document.getElementById('nav-menu').classList.remove('open'); });
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

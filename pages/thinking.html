@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Thinking and open questions by Yufeng Zhou on climate science.">
+  <title>Thinking · Yufeng Zhou</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+  <!-- 顶部导航（当前页 Thinking 高亮） -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="nav-brand" href="../index.html">Yufeng&nbsp;Zhou</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-menu" id="nav-menu">
+        <a class="nav-link" href="research.html">Research</a>
+        <a class="nav-link" href="publications.html">Publications</a>
+        <a class="nav-link" href="activity.html">Activity</a>
+        <a class="nav-link active" href="thinking.html">Thinking</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 页头 -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Thinking</h1>
+      <p class="page-desc">Ongoing thoughts and open questions. Each topic opens its own post, with a discussion area at the end.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       思考话题模块：每个话题点击进入独立 blog 页
+       说明：新增一个话题就复制一个 <a class="module-card"> 整块，
+       并新建对应的 thinking-xxx.html 页（含讨论区）。
+       ============================================================ -->
+  <section class="section">
+    <div class="container">
+      <div class="module-grid">
+
+        <a class="module-card" href="thinking-tc-frequency.html">
+          <h3>TC frequency 的讨论 <span class="arrow">→</span></h3>
+          <p>全球台风年频数为何稳定在 ~90 个？时空填充与承载力视角。</p>
+        </a>
+
+        <a class="module-card" href="thinking-hoi.html">
+          <h3>关于 HOI 对流组织程度的讨论 <span class="arrow">→</span></h3>
+          <p>用信息熵量化对流组织：HOI 的构建与解读。</p>
+        </a>
+
+        <a class="module-card" href="thinking-threshold.html">
+          <h3>关于识别对流系统阈值选择的讨论 <span class="arrow">→</span></h3>
+          <p>亮温阈值如何影响对流组织度量，如何选择鲁棒阈值。</p>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year">2026</span> Yufeng Zhou ·
+        <a href="mailto:zyf21@mails.tsinghua.edu.cn">zyf21@mails.tsinghua.edu.cn</a></p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('nav-toggle').addEventListener('click', function () {
+      var m = document.getElementById('nav-menu');
+      var o = m.classList.toggle('open');
+      this.setAttribute('aria-expanded', o);
+    });
+    document.querySelectorAll('#nav-menu a').forEach(function (a) {
+      a.addEventListener('click', function () { document.getElementById('nav-menu').classList.remove('open'); });
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

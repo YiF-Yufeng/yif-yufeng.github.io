@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Research interests and highlights of Yufeng Zhou — tropical cyclones, climate dynamics, and convective organization.">
+  <meta name="description" content="Research interests of Yufeng Zhou — tropical cyclone frequency, convective organization, and TC characteristics.">
   <title>Research · Yufeng Zhou</title>
   <link rel="stylesheet" href="../style.css">
 </head>
@@ -18,13 +18,10 @@
         <span></span><span></span><span></span>
       </button>
       <nav class="nav-menu" id="nav-menu">
-        <a class="nav-link" href="about.html">About</a>
         <a class="nav-link active" href="research.html">Research</a>
         <a class="nav-link" href="publications.html">Publications</a>
-        <a class="nav-link" href="presentations.html">Presentations</a>
-        <a class="nav-link" href="awards.html">Awards</a>
-        <a class="nav-link" href="notes.html">Notes</a>
-        <a class="nav-link" href="discussion.html">Discussion</a>
+        <a class="nav-link" href="activity.html">Activity</a>
+        <a class="nav-link" href="thinking.html">Thinking</a>
       </nav>
     </div>
   </header>
@@ -33,56 +30,49 @@
   <section class="page-header">
     <div class="container">
       <h1>Research</h1>
-      <p class="page-desc">What I study and why it matters.</p>
+      <p class="page-desc">My research interests, organized into a few ongoing threads. Click any topic to read more.</p>
     </div>
   </section>
 
   <!-- ============================================================
-       研究方向 + 研究亮点
+       研究主题总览：每个主题点击进入详情页
+       说明：新增一个主题就复制一个 <a class="module-card"> 整块，
+       并新建对应的 research-xxx.html 详情页。
        ============================================================ -->
   <section class="section">
     <div class="container">
+      <div class="module-grid">
 
-      <!-- 兴趣标签：加一个就复制一个 <span class="tag"> -->
-      <h2 class="sub-title">Research Interests</h2>
-      <div class="tags">
-        <span class="tag">Tropical cyclones</span>
-        <span class="tag">Climate dynamics</span>
-        <span class="tag">Convective organization</span>
-        <span class="tag">Extreme weather</span>
-        <span class="tag">Idealized modeling</span>
-        <span class="tag">Complex systems</span>
-      </div>
+        <a class="module-card" href="research-packing.html">
+          <h3>A Spatiotemporal Packing Framework for Tropical Cyclone Frequency <span class="arrow">→</span></h3>
+          <p>
+            Proposes a framework showing that global tropical cyclone (TC) frequency emerges from
+            the spatiotemporal packing and self-organization of the tropical climate system under
+            finite environmental constraints — linking spatial convective organization, genesis
+            interval statistics, and TC lifecycle effects.
+          </p>
+        </a>
 
-      <!-- 研究亮点卡片：增删一条就复制/删除一个 <article class="card"> -->
-      <h2 class="sub-title">Research Highlights</h2>
-      <div class="cards">
-        <article class="card">
-          <h4>A Spatiotemporal Packing Framework for Tropical Cyclone Frequency <span class="card-tag">Dissertation</span></h4>
+        <a class="module-card" href="research-hoi.html">
+          <h3>Information-Theoretic Quantification of Tropical Convective Organization <span class="arrow">→</span></h3>
           <p>
-            Proposes a framework showing that global tropical cyclone frequency emerges from the
-            spatiotemporal packing and self-organization of the tropical climate system under finite
-            environmental constraints — linking spatial convective organization, genesis interval
-            statistics, and TC lifecycle effects.
+            Develops an entropy-based Hierarchical Organization Index (HOI) and a dual-metric
+            framework integrating size hierarchy and spatial clustering to quantify convective
+            organization. Identifies an adaptive structure-optimal infrared brightness temperature
+            threshold and its long-term cooling trend.
           </p>
-        </article>
-        <article class="card">
-          <h4>Information-Theoretic Quantification of Tropical Convective Organization</h4>
+        </a>
+
+        <a class="module-card" href="research-tc-change.html">
+          <h3>Climate-Driven Changes in Tropical Cyclone Characteristics <span class="arrow">→</span></h3>
           <p>
-            Develops an entropy-based Hierarchical Organization Index (HOI) and a dual-metric framework
-            integrating size hierarchy and spatial clustering. Identifies an adaptive structure-optimal
-            infrared brightness temperature threshold and its long-term cooling trend, revealing
-            systematic structural changes in tropical convection.
+            Reveals changes in TC intensity, air-sea interaction, and motion variability by
+            decomposing lifetime maximum intensity into intensification rate and duration,
+            quantifying the weakening of TC-induced ocean cooling, and identifying increasing
+            track curvature.
           </p>
-        </article>
-        <article class="card">
-          <h4>Climate-Driven Changes in Tropical Cyclone Characteristics</h4>
-          <p>
-            Reveals changes in TC intensity, air-sea interaction, and motion variability by decomposing
-            lifetime maximum intensity into intensification rate and duration, quantifying the weakening
-            of TC-induced ocean cooling, and identifying increasing track curvature.
-          </p>
-        </article>
+        </a>
+
       </div>
     </div>
   </section>

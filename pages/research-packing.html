@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A Spatiotemporal Packing Framework for Tropical Cyclone Frequency — dissertation research by Yufeng Zhou.">
+  <title>A Spatiotemporal Packing Framework · Yufeng Zhou</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+  <!-- 顶部导航（当前页 Research 高亮） -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="nav-brand" href="../index.html">Yufeng&nbsp;Zhou</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-menu" id="nav-menu">
+        <a class="nav-link active" href="research.html">Research</a>
+        <a class="nav-link" href="publications.html">Publications</a>
+        <a class="nav-link" href="activity.html">Activity</a>
+        <a class="nav-link" href="thinking.html">Thinking</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 页头 -->
+  <section class="page-header">
+    <div class="container">
+      <h1>A Spatiotemporal Packing Framework for Tropical Cyclone Frequency</h1>
+      <p class="page-desc">Dissertation</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       正文（图文并茂内容待后续补充）
+       ============================================================ -->
+  <section class="section">
+    <div class="container">
+      <p class="lead">
+        Proposes a framework showing that global tropical cyclone (TC) frequency emerges from the
+        spatiotemporal packing and self-organization of the tropical climate system under finite
+        environmental constraints.
+      </p>
+      <p>
+        This framework links spatial convective organization, genesis interval statistics, and TC
+        lifecycle effects to explain the regulation of TC frequency.
+      </p>
+
+      <!-- 在此继续添加段落、图片、公式等详细内容 -->
+      <div class="placeholder">Detailed content (figures, equations, discussion) to be added here.</div>
+
+      <p><a class="hl" href="research.html">← Back to Research</a></p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year">2026</span> Yufeng Zhou ·
+        <a href="mailto:zyf21@mails.tsinghua.edu.cn">zyf21@mails.tsinghua.edu.cn</a></p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('nav-toggle').addEventListener('click', function () {
+      var m = document.getElementById('nav-menu');
+      var o = m.classList.toggle('open');
+      this.setAttribute('aria-expanded', o);
+    });
+    document.querySelectorAll('#nav-menu a').forEach(function (a) {
+      a.addEventListener('click', function () { document.getElementById('nav-menu').classList.remove('open'); });
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

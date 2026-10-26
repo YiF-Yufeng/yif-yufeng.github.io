@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TC frequency 的讨论 — thinking by Yufeng Zhou.">
+  <title>TC frequency 的讨论 · Yufeng Zhou</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+  <!-- 顶部导航（当前页 Thinking 高亮） -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="nav-brand" href="../index.html">Yufeng&nbsp;Zhou</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-menu" id="nav-menu">
+        <a class="nav-link" href="research.html">Research</a>
+        <a class="nav-link" href="publications.html">Publications</a>
+        <a class="nav-link" href="activity.html">Activity</a>
+        <a class="nav-link active" href="thinking.html">Thinking</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 页头 -->
+  <section class="page-header">
+    <div class="container">
+      <h1>TC frequency 的讨论</h1>
+      <p class="page-desc">全球台风年频数为何稳定在 ~90 个？</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       正文（用户后续补充文本）
+       ============================================================ -->
+  <section class="section">
+    <div class="container">
+      <p class="lead">
+        全球台风年频数为何稳定在 ~90 个？时空填充与承载力视角。
+      </p>
+
+      <!-- 在此撰写正文：段落、图片、公式等 -->
+      <div class="placeholder">正文内容待补充。</div>
+
+      <!-- ============================================================
+           讨论区（giscus）
+           说明：评论保存在本仓库 GitHub Discussions 里，访客用 GitHub 账号登录。
+           首次上线前需在 GitHub 侧做三步（见 README「Discussion」一节）：
+             1) 仓库 Settings → 勾选 Discussions；
+             2) 安装 giscus App：https://github.com/apps/giscus
+             3) 打开 https://giscus.app 生成配置，替换下面两处占位符。
+           ============================================================ -->
+      <h2 class="sub-title">讨论</h2>
+      <div class="giscus"></div>
+      <script src="https://giscus.app/client.js"
+              data-repo="YiF-Yufeng/yif-yufeng.github.io"
+              data-repo-id="REPLACE_WITH_REPO_ID"
+              data-category="Announcements"
+              data-category-id="REPLACE_WITH_CATEGORY_ID"
+              data-mapping="pathname"
+              data-strict="0"
+              data-reactions-enabled="1"
+              data-emit-metadata="0"
+              data-input-position="top"
+              data-theme="light"
+              data-lang="en"
+              data-loading="lazy"
+              crossorigin="anonymous"
+              async>
+      </script>
+
+      <p><a class="hl" href="thinking.html">← Back to Thinking</a></p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year">2026</span> Yufeng Zhou ·
+        <a href="mailto:zyf21@mails.tsinghua.edu.cn">zyf21@mails.tsinghua.edu.cn</a></p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('nav-toggle').addEventListener('click', function () {
+      var m = document.getElementById('nav-menu');
+      var o = m.classList.toggle('open');
+      this.setAttribute('aria-expanded', o);
+    });
+    document.querySelectorAll('#nav-menu a').forEach(function (a) {
+      a.addEventListener('click', function () { document.getElementById('nav-menu').classList.remove('open'); });
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

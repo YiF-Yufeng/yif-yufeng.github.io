@@ -22,13 +22,10 @@
         <span></span><span></span><span></span>
       </button>
       <nav class="nav-menu" id="nav-menu">
-        <a class="nav-link" href="pages/about.html">About</a>
         <a class="nav-link" href="pages/research.html">Research</a>
         <a class="nav-link" href="pages/publications.html">Publications</a>
-        <a class="nav-link" href="pages/presentations.html">Presentations</a>
-        <a class="nav-link" href="pages/awards.html">Awards</a>
-        <a class="nav-link" href="pages/notes.html">Notes</a>
-        <a class="nav-link" href="pages/discussion.html">Discussion</a>
+        <a class="nav-link" href="pages/activity.html">Activity</a>
+        <a class="nav-link" href="pages/thinking.html">Thinking</a>
       </nav>
     </div>
   </header>
@@ -68,49 +65,82 @@
   </section>
 
   <!-- ============================================================
-       主页入口卡片：点击跳转到各个子页面
-       说明：新增一个模块，复制一个 <a class="module-card"> 即可。
+       ABOUT：个人介绍 + 教育经历（原 about 页内容合并到首页）
+       ============================================================ -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">About</h2>
+      <p class="lead">
+        I am a Ph.D. candidate in the Department of Earth System Science at Tsinghua University,
+        advised by Prof. Yanluan Lin. My research focuses on identifying the physical constraints
+        that govern tropical cyclone frequency and understanding its response to climate change.
+        Beyond this, I am broadly interested in multiscale climate dynamics, extreme weather,
+        idealized modeling, and complex-system perspectives on the Earth system.
+      </p>
+      <p>
+        I enjoy identifying and discovering emerging patterns in complex climate systems, and
+        proposing novel mathematical and physical approaches to address fundamental questions in
+        atmospheric and climate sciences.
+      </p>
+
+      <!-- 教育经历：新增一条就复制一个 <div class="edu-item"> -->
+      <h3 class="sub-title">Education</h3>
+      <div class="edu-list">
+        <div class="edu-item">
+          <div class="edu-date">Aug 2021 – present<br><span class="muted">expected Dec 2026</span></div>
+          <div class="edu-body">
+            <strong>Ph.D. in Atmospheric Science</strong>
+            <p>Department of Earth System Science, Tsinghua University · Advisor: Prof. Yanluan Lin</p>
+          </div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-date">Aug 2017 – Jun 2021</div>
+          <div class="edu-body">
+            <strong>B.Eng. in Engineering Physics</strong>
+            <p>Department of Engineering Physics, Tsinghua University</p>
+          </div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-date">Aug 2018 – Jun 2021</div>
+          <div class="edu-body">
+            <strong>Minor in Statistics</strong>
+            <p>Department of Industrial Engineering, Tsinghua University</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       THINKING：最新思考话题，横向滑动，最新在前
+       说明：新增一个话题就复制一个 <a class="think-card"> 整块，
+       并把它放到最前面（最新的在最左）。
        ============================================================ -->
   <section class="section section-alt">
     <div class="container">
-      <h2 class="section-title">Explore</h2>
-      <div class="module-grid">
+      <div class="section-title-row">
+        <h2 class="section-title">Thinking</h2>
+        <a class="view-all" href="pages/thinking.html">View all →</a>
+      </div>
 
-        <a class="module-card" href="pages/about.html">
-          <h3>About <span class="arrow">→</span></h3>
-          <p>Who I am, my background, and my education.</p>
+      <div class="hscroll">
+        <a class="think-card" href="pages/thinking-tc-frequency.html">
+          <span class="think-kind">Thinking</span>
+          <h3>TC frequency 的讨论</h3>
+          <p>全球台风年频数为何稳定在 ~90 个？时空填充与承载力视角。</p>
         </a>
 
-        <a class="module-card" href="pages/research.html">
-          <h3>Research <span class="arrow">→</span></h3>
-          <p>Research interests and highlights.</p>
+        <a class="think-card" href="pages/thinking-hoi.html">
+          <span class="think-kind">Thinking</span>
+          <h3>关于 HOI 对流组织程度的讨论</h3>
+          <p>用信息熵量化对流组织：HOI 的构建与解读。</p>
         </a>
 
-        <a class="module-card" href="pages/publications.html">
-          <h3>Publications <span class="arrow">→</span></h3>
-          <p>Peer-reviewed journal papers.</p>
+        <a class="think-card" href="pages/thinking-threshold.html">
+          <span class="think-kind">Thinking</span>
+          <h3>关于识别对流系统阈值选择的讨论</h3>
+          <p>亮温阈值如何影响对流组织度量，如何选择鲁棒阈值。</p>
         </a>
-
-        <a class="module-card" href="pages/presentations.html">
-          <h3>Presentations <span class="arrow">→</span></h3>
-          <p>Conference talks and posters.</p>
-        </a>
-
-        <a class="module-card" href="pages/awards.html">
-          <h3>Awards <span class="arrow">→</span></h3>
-          <p>Honors and academic service.</p>
-        </a>
-
-        <a class="module-card" href="pages/notes.html">
-          <h3>Notes <span class="arrow">→</span></h3>
-          <p>Occasional ideas and open questions.</p>
-        </a>
-
-        <a class="module-card" href="pages/discussion.html">
-          <h3>Discussion <span class="arrow">→</span></h3>
-          <p>Leave a comment or start a conversation.</p>
-        </a>
-
       </div>
     </div>
   </section>

@@ -510,3 +510,86 @@ a.pub-title:hover { color: var(--accent); }
   .pub, .talk { flex-direction: column; gap: 8px; }
   .award-list li { flex-direction: column; gap: 2px; }
 }
+
+
+/* --------------------------------------------------------------------------
+   14. 新增：首页 THINKING 横向滑动 + 标题行 + 论文一句话介绍 + 占位区
+   -------------------------------------------------------------------------- */
+.section-title-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+}
+.section-title-row .section-title { margin-bottom: 28px; }
+.view-all {
+  flex-shrink: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent);
+}
+.view-all:hover { color: var(--accent-dark); }
+
+/* 横向滑动容器（首页 Thinking，最新在前） */
+.hscroll {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 4px 4px 16px;
+  -webkit-overflow-scrolling: touch;
+}
+.hscroll::-webkit-scrollbar { height: 8px; }
+.hscroll::-webkit-scrollbar-track { background: transparent; }
+.hscroll::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+
+/* 思考话题卡片 */
+.think-card {
+  flex: 0 0 340px;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+.think-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+  border-color: var(--accent);
+  text-decoration: none;
+}
+.think-kind {
+  align-self: flex-start;
+  padding: 2px 10px;
+  margin-bottom: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent-dark);
+  background: var(--accent-soft);
+  border-radius: 999px;
+}
+.think-card h3 { margin: 0 0 8px; font-size: 19px; color: var(--heading); line-height: 1.4; }
+.think-card p { margin: 0; font-size: 15px; color: var(--text); }
+
+/* 论文一句话介绍（第一作者文章） */
+.pub-summary { margin: 8px 0 0; font-size: 15px; color: var(--heading); }
+
+/* 详情页"待补充"占位区 */
+.placeholder {
+  margin: 24px 0;
+  padding: 28px;
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+  color: var(--muted);
+  text-align: center;
+  font-size: 15px;
+}
+
+@media (max-width: 640px) {
+  .think-card { flex-basis: 82vw; }
+  .section-title-row { flex-wrap: wrap; }
+}
