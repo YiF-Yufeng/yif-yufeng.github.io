@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Notes and ideas by Yufeng Zhou on climate science.">
+  <title>Notes · Yufeng Zhou</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+  <!-- 顶部导航（当前页 Notes 高亮） -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="nav-brand" href="../index.html">Yufeng&nbsp;Zhou</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-menu" id="nav-menu">
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="research.html">Research</a>
+        <a class="nav-link" href="publications.html">Publications</a>
+        <a class="nav-link" href="presentations.html">Presentations</a>
+        <a class="nav-link" href="awards.html">Awards</a>
+        <a class="nav-link active" href="notes.html">Notes</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 页头 -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Notes &amp; Ideas</h1>
+      <p class="page-desc">Occasional writings and open questions.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       想法与思考（可当作博客用）
+       说明：新增一篇文章，复制一个 <article class="note"> 整块即可。
+       若要变成独立博客页，可把每篇做成 notes/xxx.html，
+       然后把下面 <a href="#"> 换成对应链接。
+       ============================================================ -->
+  <section class="section">
+    <div class="container">
+      <p class="lead">
+        I occasionally write short notes on research ideas, methods, and thoughts on the climate
+        system. If anything resonates — or doesn't — feel free to
+        <a href="mailto:zyf21@mails.tsinghua.edu.cn" class="hl">reach out for a discussion</a>.
+      </p>
+
+      <div class="note-list">
+
+        <!-- 示例文章 1：替换标题/日期/摘要即可 -->
+        <article class="note">
+          <h4><a href="#">Why does the global number of tropical cyclones hover around 90 per year?</a></h4>
+          <p class="note-date">Example post — replace with your own</p>
+          <p>
+            A brief thought on how a finite "carrying capacity" of the tropical atmosphere might
+            naturally set an upper bound on TC frequency — and what a packing perspective implies
+            for its climate sensitivity.
+          </p>
+        </article>
+
+        <!-- 示例文章 2 -->
+        <article class="note">
+          <h4><a href="#">Quantifying convective organization with information theory</a></h4>
+          <p class="note-date">Example post — replace with your own</p>
+          <p>
+            Notes on building a Hierarchical Organization Index: why entropy plus spatial clustering
+            captures structure that single metrics miss, and how to choose a robust brightness
+            temperature threshold.
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year">2026</span> Yufeng Zhou ·
+        <a href="mailto:zyf21@mails.tsinghua.edu.cn">zyf21@mails.tsinghua.edu.cn</a></p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('nav-toggle').addEventListener('click', function () {
+      var m = document.getElementById('nav-menu');
+      var o = m.classList.toggle('open');
+      this.setAttribute('aria-expanded', o);
+    });
+    document.querySelectorAll('#nav-menu a').forEach(function (a) {
+      a.addEventListener('click', function () { document.getElementById('nav-menu').classList.remove('open'); });
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

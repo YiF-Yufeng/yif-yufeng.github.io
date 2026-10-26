@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About Yufeng Zhou — Ph.D. candidate in Atmospheric Science at Tsinghua University.">
+  <title>About · Yufeng Zhou</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+  <!-- 顶部导航（当前页 About 高亮） -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="nav-brand" href="../index.html">Yufeng&nbsp;Zhou</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-menu" id="nav-menu">
+        <a class="nav-link active" href="about.html">About</a>
+        <a class="nav-link" href="research.html">Research</a>
+        <a class="nav-link" href="publications.html">Publications</a>
+        <a class="nav-link" href="presentations.html">Presentations</a>
+        <a class="nav-link" href="awards.html">Awards</a>
+        <a class="nav-link" href="notes.html">Notes</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 页头 -->
+  <section class="page-header">
+    <div class="container">
+      <h1>About</h1>
+      <p class="page-desc">Who I am, and how I got here.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       自我介绍
+       ============================================================ -->
+  <section class="section">
+    <div class="container">
+      <p class="lead">
+        I am a Ph.D. candidate in the Department of Earth System Science at Tsinghua University,
+        advised by Prof. Yanluan Lin. My research focuses on identifying the physical constraints
+        that govern tropical cyclone frequency and understanding its response to climate change.
+        Beyond this, I am broadly interested in multiscale climate dynamics, extreme weather,
+        idealized modeling, and complex-system perspectives on the Earth system.
+      </p>
+      <p>
+        I enjoy identifying and discovering emerging patterns in complex climate systems, and
+        proposing novel mathematical and physical approaches to address fundamental questions in
+        atmospheric and climate sciences.
+      </p>
+
+      <!-- 教育经历：新增一条就复制一个 <div class="edu-item"> -->
+      <h2 class="sub-title">Education</h2>
+      <div class="edu-list">
+        <div class="edu-item">
+          <div class="edu-date">Aug 2021 – present<br><span class="muted">expected Dec 2026</span></div>
+          <div class="edu-body">
+            <strong>Ph.D. in Atmospheric Science</strong>
+            <p>Department of Earth System Science, Tsinghua University · Advisor: Prof. Yanluan Lin</p>
+          </div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-date">Aug 2017 – Jun 2021</div>
+          <div class="edu-body">
+            <strong>B.Eng. in Engineering Physics</strong>
+            <p>Department of Engineering Physics, Tsinghua University</p>
+          </div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-date">Aug 2018 – Jun 2021</div>
+          <div class="edu-body">
+            <strong>Minor in Statistics</strong>
+            <p>Department of Industrial Engineering, Tsinghua University</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year">2026</span> Yufeng Zhou ·
+        <a href="mailto:zyf21@mails.tsinghua.edu.cn">zyf21@mails.tsinghua.edu.cn</a></p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('nav-toggle').addEventListener('click', function () {
+      var m = document.getElementById('nav-menu');
+      var o = m.classList.toggle('open');
+      this.setAttribute('aria-expanded', o);
+    });
+    document.querySelectorAll('#nav-menu a').forEach(function (a) {
+      a.addEventListener('click', function () { document.getElementById('nav-menu').classList.remove('open'); });
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

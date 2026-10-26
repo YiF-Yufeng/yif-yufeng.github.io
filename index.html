@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Yufeng Zhou (周宇峰) — Ph.D. candidate in Atmospheric Science at Tsinghua University, studying tropical cyclone frequency, climate dynamics, and convective organization.">
+  <meta name="author" content="Yufeng Zhou">
+  <title>Yufeng Zhou | Ph.D. Candidate in Atmospheric Science</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ============================================================
+       顶部导航栏（每个页面一致）
+       说明：当前页面在对应链接上手动加 class="active"。
+       ============================================================ -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="nav-brand" href="index.html">Yufeng&nbsp;Zhou</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-menu" id="nav-menu">
+        <a class="nav-link" href="pages/about.html">About</a>
+        <a class="nav-link" href="pages/research.html">Research</a>
+        <a class="nav-link" href="pages/publications.html">Publications</a>
+        <a class="nav-link" href="pages/presentations.html">Presentations</a>
+        <a class="nav-link" href="pages/awards.html">Awards</a>
+        <a class="nav-link" href="pages/notes.html">Notes</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       主页顶部 HERO：姓名、照片、头衔、一句话定位、联系方式
+       ============================================================ -->
+  <section class="hero" id="top">
+    <div class="container hero-inner">
+      <div class="hero-photo">
+        <img src="images/photo.jpg" alt="Portrait of Yufeng Zhou">
+      </div>
+      <div class="hero-text">
+        <h1>Yufeng Zhou <span class="hero-zh">周宇峰</span></h1>
+        <p class="hero-role">Ph.D. Candidate in Atmospheric Science</p>
+        <p class="hero-affil">Department of Earth System Science, Tsinghua University</p>
+        <p class="hero-tagline">
+          I study the physical constraints that govern tropical cyclone frequency and
+          its response to climate change.
+        </p>
+        <div class="hero-links">
+          <a class="hero-link" href="mailto:zyf21@mails.tsinghua.edu.cn" title="Email">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <span>Email</span>
+          </a>
+          <a class="hero-link" href="https://www.researchgate.net/profile/Yufeng-Zhou-11" target="_blank" rel="noopener" title="ResearchGate">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h10a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm3 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm0 5c-1.1 0-2 .9-2 2v2h4v-2c0-1.1-.9-2-2-2zm5.5-5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7z"/></svg>
+            <span>ResearchGate</span>
+          </a>
+          <a class="hero-link" href="https://github.com/yif-yufeng" target="_blank" rel="noopener" title="GitHub">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2.17c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.34.95.1-.74.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.59.23 2.76.11 3.05.73.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.25 5.66.41.35.77 1.05.77 2.12v3.14c0 .31.21.68.8.56A10.5 10.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+            <span>GitHub</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       主页入口卡片：点击跳转到各个子页面
+       说明：新增一个模块，复制一个 <a class="module-card"> 即可。
+       ============================================================ -->
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Explore</h2>
+      <div class="module-grid">
+
+        <a class="module-card" href="pages/about.html">
+          <h3>About <span class="arrow">→</span></h3>
+          <p>Who I am, my background, and my education.</p>
+        </a>
+
+        <a class="module-card" href="pages/research.html">
+          <h3>Research <span class="arrow">→</span></h3>
+          <p>Research interests and highlights.</p>
+        </a>
+
+        <a class="module-card" href="pages/publications.html">
+          <h3>Publications <span class="arrow">→</span></h3>
+          <p>Peer-reviewed journal papers.</p>
+        </a>
+
+        <a class="module-card" href="pages/presentations.html">
+          <h3>Presentations <span class="arrow">→</span></h3>
+          <p>Conference talks and posters.</p>
+        </a>
+
+        <a class="module-card" href="pages/awards.html">
+          <h3>Awards <span class="arrow">→</span></h3>
+          <p>Honors and academic service.</p>
+        </a>
+
+        <a class="module-card" href="pages/notes.html">
+          <h3>Notes <span class="arrow">→</span></h3>
+          <p>Occasional ideas and open questions.</p>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       页脚（每个页面一致）
+       ============================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year">2026</span> Yufeng Zhou ·
+        <a href="mailto:zyf21@mails.tsinghua.edu.cn">zyf21@mails.tsinghua.edu.cn</a></p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('nav-toggle').addEventListener('click', function () {
+      var m = document.getElementById('nav-menu');
+      var o = m.classList.toggle('open');
+      this.setAttribute('aria-expanded', o);
+    });
+    document.querySelectorAll('#nav-menu a').forEach(function (a) {
+      a.addEventListener('click', function () { document.getElementById('nav-menu').classList.remove('open'); });
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

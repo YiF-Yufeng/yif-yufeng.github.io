@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Research interests and highlights of Yufeng Zhou — tropical cyclones, climate dynamics, and convective organization.">
+  <title>Research · Yufeng Zhou</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+  <!-- 顶部导航（当前页 Research 高亮） -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="nav-brand" href="../index.html">Yufeng&nbsp;Zhou</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-menu" id="nav-menu">
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link active" href="research.html">Research</a>
+        <a class="nav-link" href="publications.html">Publications</a>
+        <a class="nav-link" href="presentations.html">Presentations</a>
+        <a class="nav-link" href="awards.html">Awards</a>
+        <a class="nav-link" href="notes.html">Notes</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 页头 -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Research</h1>
+      <p class="page-desc">What I study and why it matters.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       研究方向 + 研究亮点
+       ============================================================ -->
+  <section class="section">
+    <div class="container">
+
+      <!-- 兴趣标签：加一个就复制一个 <span class="tag"> -->
+      <h2 class="sub-title">Research Interests</h2>
+      <div class="tags">
+        <span class="tag">Tropical cyclones</span>
+        <span class="tag">Climate dynamics</span>
+        <span class="tag">Convective organization</span>
+        <span class="tag">Extreme weather</span>
+        <span class="tag">Idealized modeling</span>
+        <span class="tag">Complex systems</span>
+      </div>
+
+      <!-- 研究亮点卡片：增删一条就复制/删除一个 <article class="card"> -->
+      <h2 class="sub-title">Research Highlights</h2>
+      <div class="cards">
+        <article class="card">
+          <h4>A Spatiotemporal Packing Framework for Tropical Cyclone Frequency <span class="card-tag">Dissertation</span></h4>
+          <p>
+            Proposes a framework showing that global tropical cyclone frequency emerges from the
+            spatiotemporal packing and self-organization of the tropical climate system under finite
+            environmental constraints — linking spatial convective organization, genesis interval
+            statistics, and TC lifecycle effects.
+          </p>
+        </article>
+        <article class="card">
+          <h4>Information-Theoretic Quantification of Tropical Convective Organization</h4>
+          <p>
+            Develops an entropy-based Hierarchical Organization Index (HOI) and a dual-metric framework
+            integrating size hierarchy and spatial clustering. Identifies an adaptive structure-optimal
+            infrared brightness temperature threshold and its long-term cooling trend, revealing
+            systematic structural changes in tropical convection.
+          </p>
+        </article>
+        <article class="card">
+          <h4>Climate-Driven Changes in Tropical Cyclone Characteristics</h4>
+          <p>
+            Reveals changes in TC intensity, air-sea interaction, and motion variability by decomposing
+            lifetime maximum intensity into intensification rate and duration, quantifying the weakening
+            of TC-induced ocean cooling, and identifying increasing track curvature.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year">2026</span> Yufeng Zhou ·
+        <a href="mailto:zyf21@mails.tsinghua.edu.cn">zyf21@mails.tsinghua.edu.cn</a></p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('nav-toggle').addEventListener('click', function () {
+      var m = document.getElementById('nav-menu');
+      var o = m.classList.toggle('open');
+      this.setAttribute('aria-expanded', o);
+    });
+    document.querySelectorAll('#nav-menu a').forEach(function (a) {
+      a.addEventListener('click', function () { document.getElementById('nav-menu').classList.remove('open'); });
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

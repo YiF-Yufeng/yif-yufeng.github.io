@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Honors, awards, and academic service of Yufeng Zhou.">
+  <title>Awards · Yufeng Zhou</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+  <!-- 顶部导航（当前页 Awards 高亮） -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="nav-brand" href="../index.html">Yufeng&nbsp;Zhou</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-menu" id="nav-menu">
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="research.html">Research</a>
+        <a class="nav-link" href="publications.html">Publications</a>
+        <a class="nav-link" href="presentations.html">Presentations</a>
+        <a class="nav-link active" href="awards.html">Awards</a>
+        <a class="nav-link" href="notes.html">Notes</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 页头 -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Awards &amp; Service</h1>
+      <p class="page-desc">Honors and contributions to the community.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       荣誉奖励 + 学术服务
+       说明：荣誉新增一条就复制一个 <li>。
+       ============================================================ -->
+  <section class="section">
+    <div class="container">
+
+      <h2 class="sub-title">Honors &amp; Awards</h2>
+      <ul class="award-list">
+        <li>
+          <span class="award-name">National Scholarship for Doctoral Students</span>
+          <span class="award-meta">Ministry of Education · 2024</span>
+        </li>
+        <li>
+          <span class="award-name">Tsinghua University Comprehensive Scholarship</span>
+          <span class="award-meta">2022, 2023, 2025</span>
+        </li>
+        <li>
+          <span class="award-name">Best Student Poster Award</span>
+          <span class="award-meta">36th AMS Conference on Hurricanes and Tropical Meteorology · 2024</span>
+        </li>
+        <li>
+          <span class="award-name">Founder &amp; First President, Tsinghua University Student Association of Meteorology</span>
+          <span class="award-meta">2021 – 2025</span>
+        </li>
+      </ul>
+
+      <h2 class="sub-title">Academic Service</h2>
+      <ul class="service-list">
+        <li>
+          <strong>Journal Reviewer:</strong> Geophysical Research Letters, Journal of Climate,
+          Communications Earth &amp; Environment, npj Climate and Atmospheric Science.
+        </li>
+        <li>
+          <strong>Teaching Assistant:</strong> Introduction to Meteorology (Prof. Yanluan Lin &amp;
+          Assoc. Prof. Yiran Peng, 2021–2022); Advanced Synoptic Meteorology (Prof. Yanluan Lin, 2024–2025).
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year">2026</span> Yufeng Zhou ·
+        <a href="mailto:zyf21@mails.tsinghua.edu.cn">zyf21@mails.tsinghua.edu.cn</a></p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('nav-toggle').addEventListener('click', function () {
+      var m = document.getElementById('nav-menu');
+      var o = m.classList.toggle('open');
+      this.setAttribute('aria-expanded', o);
+    });
+    document.querySelectorAll('#nav-menu a').forEach(function (a) {
+      a.addEventListener('click', function () { document.getElementById('nav-menu').classList.remove('open'); });
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
