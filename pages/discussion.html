@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discussion board — leave comments, ask questions, and exchange ideas with Yufeng Zhou.">
+  <title>Discussion · Yufeng Zhou</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+  <!-- 顶部导航（当前页 Discussion 高亮） -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="nav-brand" href="../index.html">Yufeng&nbsp;Zhou</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-menu" id="nav-menu">
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="research.html">Research</a>
+        <a class="nav-link" href="publications.html">Publications</a>
+        <a class="nav-link" href="presentations.html">Presentations</a>
+        <a class="nav-link" href="awards.html">Awards</a>
+        <a class="nav-link" href="notes.html">Notes</a>
+        <a class="nav-link active" href="discussion.html">Discussion</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 页头 -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Discussion</h1>
+      <p class="page-desc">Comments, questions, and open exchange.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       讨论区（giscus）
+       说明：
+       - 评论实际保存在本仓库的 GitHub Discussions 里，无需自建后端。
+       - 访客需要一个（免费）GitHub 账号登录后即可发帖、回复、点赞。
+       - 首次上线前，需要你在 GitHub 侧做三步（见 README「Discussion」一节）：
+           1) 仓库 Settings → 勾选 Discussions；
+           2) 安装 giscus App 并授权本仓库：https://github.com/apps/giscus
+           3) 打开 https://giscus.app ，按提示生成配置，
+              把下面 data-repo-id 与 data-category-id 两处占位符换成生成的值。
+       ============================================================ -->
+  <section class="section">
+    <div class="container">
+      <p class="lead">
+        Questions about my research, feedback on the site, or just to say hi — leave a comment
+        below. I'll reply here. Comments are public and stored as GitHub Discussions in this
+        site's repository.
+      </p>
+
+      <div class="giscus"></div>
+      <script src="https://giscus.app/client.js"
+              data-repo="YiF-Yufeng/yif-yufeng.github.io"
+              data-repo-id="R_kgDOVXhUlg"
+              data-category="Announcements"
+              data-category-id="DIC_kwDOVXhUls4DJqRF"
+              data-mapping="pathname"
+              data-strict="0"
+              data-reactions-enabled="1"
+              data-emit-metadata="0"
+              data-input-position="top"
+              data-theme="light"
+              data-lang="en"
+              data-loading="lazy"
+              crossorigin="anonymous"
+              async>
+      </script>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year">2026</span> Yufeng Zhou ·
+        <a href="mailto:zyf21@mails.tsinghua.edu.cn">zyf21@mails.tsinghua.edu.cn</a></p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('nav-toggle').addEventListener('click', function () {
+      var m = document.getElementById('nav-menu');
+      var o = m.classList.toggle('open');
+      this.setAttribute('aria-expanded', o);
+    });
+    document.querySelectorAll('#nav-menu a').forEach(function (a) {
+      a.addEventListener('click', function () { document.getElementById('nav-menu').classList.remove('open'); });
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
