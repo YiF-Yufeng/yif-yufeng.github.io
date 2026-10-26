@@ -513,7 +513,7 @@ a.pub-title:hover { color: var(--accent); }
 
 
 /* --------------------------------------------------------------------------
-   14. 新增：首页 THINKING 横向滑动 + 标题行 + 论文一句话介绍 + 占位区
+   14. 横向滑动 + 精致卡片 + 论坛列表 + 会议详情 + 紧凑论文
    -------------------------------------------------------------------------- */
 .section-title-row {
   display: flex;
@@ -522,6 +522,7 @@ a.pub-title:hover { color: var(--accent); }
   gap: 16px;
 }
 .section-title-row .section-title { margin-bottom: 28px; }
+.section-title-row .sub-title { margin: 0 0 18px; }
 .view-all {
   flex-shrink: 0;
   font-size: 14px;
@@ -530,58 +531,141 @@ a.pub-title:hover { color: var(--accent); }
 }
 .view-all:hover { color: var(--accent-dark); }
 
-/* 横向滑动容器（首页 Thinking，最新在前） */
+/* 横向滑动容器：可鼠标拖动 + 可见滑轨（最新在最左） */
 .hscroll {
   display: flex;
-  gap: 20px;
+  gap: 18px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  padding: 4px 4px 16px;
+  padding: 4px 4px 18px;
+  cursor: grab;
   -webkit-overflow-scrolling: touch;
 }
-.hscroll::-webkit-scrollbar { height: 8px; }
-.hscroll::-webkit-scrollbar-track { background: transparent; }
-.hscroll::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+.hscroll.dragging { cursor: grabbing; scroll-snap-type: none; }
+.hscroll::-webkit-scrollbar { height: 10px; }
+.hscroll::-webkit-scrollbar-track { background: var(--bg-alt); border-radius: 5px; }
+.hscroll::-webkit-scrollbar-thumb {
+  background: #c9d3e0;
+  border-radius: 5px;
+  border: 2px solid var(--bg-alt);
+}
+.hscroll::-webkit-scrollbar-thumb:hover { background: var(--accent); }
 
-/* 思考话题卡片 */
-.think-card {
-  flex: 0 0 340px;
+/* 滑动卡片（首页 Thinking / Activity 会议共用） */
+.slide-card {
+  flex: 0 0 300px;
   scroll-snap-align: start;
   display: flex;
   flex-direction: column;
   background: #fff;
   border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 24px;
+  border-radius: 16px;
+  padding: 20px 22px;
   box-shadow: var(--shadow-sm);
-  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
 }
-.think-card:hover {
-  transform: translateY(-3px);
+.slide-card:hover {
+  transform: translateY(-4px);
   box-shadow: var(--shadow);
-  border-color: var(--accent);
+  border-color: rgba(37, 99, 235, .4);
   text-decoration: none;
 }
-.think-kind {
-  align-self: flex-start;
-  padding: 2px 10px;
+.slide-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
   margin-bottom: 12px;
+}
+.slide-tag {
+  padding: 2px 10px;
   font-size: 12px;
   font-weight: 600;
   color: var(--accent-dark);
   background: var(--accent-soft);
   border-radius: 999px;
+  white-space: nowrap;
 }
-.think-card h3 { margin: 0 0 8px; font-size: 19px; color: var(--heading); line-height: 1.4; }
-.think-card p { margin: 0; font-size: 15px; color: var(--text); }
+.slide-date { font-size: 12px; color: var(--muted); white-space: nowrap; }
+.slide-card h3 {
+  margin: 0 0 8px;
+  font-size: 17px;
+  line-height: 1.45;
+  color: var(--heading);
+}
+.slide-desc { margin: 0; font-size: 14px; color: var(--text); flex: 1; }
+.slide-foot {
+  margin-top: 16px;
+  padding-top: 13px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  color: var(--muted);
+}
+.slide-comments {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--heading);
+  font-weight: 500;
+}
+.slide-comments svg { width: 15px; height: 15px; fill: var(--accent); }
+.slide-more { color: var(--accent); font-weight: 600; }
 
-/* 论文一句话介绍（第一作者文章） */
-.pub-summary { margin: 8px 0 0; font-size: 15px; color: var(--heading); }
+/* 论坛式话题列表（Thinking 页） */
+.thread-list { display: flex; flex-direction: column; gap: 10px; }
+.thread {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 16px 20px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+.thread:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+  border-color: var(--accent);
+  text-decoration: none;
+}
+.thread-main { flex: 1; min-width: 0; }
+.thread-title { margin: 0; font-size: 16.5px; font-weight: 600; color: var(--heading); line-height: 1.4; }
+.thread-desc { margin: 4px 0 0; font-size: 14px; color: var(--muted); }
+.thread-meta {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+.thread-comments {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent-dark);
+}
+.thread-comments svg { width: 15px; height: 15px; fill: var(--accent); }
+.thread-date { font-size: 12px; color: var(--muted); }
+
+/* 论文列表：紧凑行距（按年份倒序） */
+.pub { padding: 11px 0; }
+.pub-title { font-size: 16px; line-height: 1.4; }
+.pub-authors { margin: 3px 0 1px; font-size: 14px; }
+.pub-venue { font-size: 13px; }
+.pub-summary { margin: 4px 0 0; font-size: 14px; color: var(--heading); }
 
 /* 详情页"待补充"占位区 */
 .placeholder {
-  margin: 24px 0;
-  padding: 28px;
+  margin: 20px 0;
+  padding: 24px;
   border: 1px dashed var(--border);
   border-radius: var(--radius);
   color: var(--muted);
@@ -589,7 +673,19 @@ a.pub-title:hover { color: var(--accent); }
   font-size: 15px;
 }
 
+/* 会议详情列表（conferences 页） */
+.conf-list { display: flex; flex-direction: column; }
+.conf { padding: 18px 0; border-bottom: 1px solid var(--border); }
+.conf:first-child { padding-top: 0; }
+.conf:last-child { border-bottom: none; }
+.conf-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.conf-head h3 { margin: 0; font-size: 17px; color: var(--heading); line-height: 1.45; flex: 1; }
+.conf-meta { margin: 6px 0 0; font-size: 14px; color: var(--muted); }
+.conf-detail { margin: 10px 0 0; font-size: 14.5px; color: var(--text); }
+
 @media (max-width: 640px) {
-  .think-card { flex-basis: 82vw; }
+  .slide-card { flex-basis: 82vw; }
   .section-title-row { flex-wrap: wrap; }
+  .thread { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .thread-meta { flex-direction: row; align-items: center; gap: 12px; }
 }

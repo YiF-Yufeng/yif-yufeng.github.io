@@ -112,8 +112,8 @@
   </section>
 
   <!-- ============================================================
-       THINKING：最新思考话题，横向滑动，最新在前
-       说明：新增一个话题就复制一个 <a class="think-card"> 整块，
+       THINKING：最新思考话题，横向滑动 + 可见滑轨，最新在最左
+       说明：新增一个话题就复制一个 <a class="slide-card"> 整块，
        并把它放到最前面（最新的在最左）。
        ============================================================ -->
   <section class="section section-alt">
@@ -124,22 +124,82 @@
       </div>
 
       <div class="hscroll">
-        <a class="think-card" href="pages/thinking-tc-frequency.html">
-          <span class="think-kind">Thinking</span>
+        <a class="slide-card" href="pages/thinking-tc-frequency.html">
+          <div class="slide-card-top">
+            <span class="slide-tag">台风频数</span>
+            <span class="slide-date">2026-08-12</span>
+          </div>
           <h3>TC frequency 的讨论</h3>
-          <p>全球台风年频数为何稳定在 ~90 个？时空填充与承载力视角。</p>
+          <p class="slide-desc">全球台风年频数为何稳定在 ~90 个？时空填充与承载力视角。</p>
+          <div class="slide-foot">
+            <span class="slide-comments"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>5 讨论</span>
+            <span class="slide-more">阅读 →</span>
+          </div>
         </a>
 
-        <a class="think-card" href="pages/thinking-hoi.html">
-          <span class="think-kind">Thinking</span>
+        <a class="slide-card" href="pages/thinking-hoi.html">
+          <div class="slide-card-top">
+            <span class="slide-tag">对流组织</span>
+            <span class="slide-date">2026-07-28</span>
+          </div>
           <h3>关于 HOI 对流组织程度的讨论</h3>
-          <p>用信息熵量化对流组织：HOI 的构建与解读。</p>
+          <p class="slide-desc">用信息熵量化对流组织：HOI 的构建与解读。</p>
+          <div class="slide-foot">
+            <span class="slide-comments"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>3 讨论</span>
+            <span class="slide-more">阅读 →</span>
+          </div>
         </a>
 
-        <a class="think-card" href="pages/thinking-threshold.html">
-          <span class="think-kind">Thinking</span>
+        <a class="slide-card" href="pages/thinking-threshold.html">
+          <div class="slide-card-top">
+            <span class="slide-tag">对流组织</span>
+            <span class="slide-date">2026-07-05</span>
+          </div>
           <h3>关于识别对流系统阈值选择的讨论</h3>
-          <p>亮温阈值如何影响对流组织度量，如何选择鲁棒阈值。</p>
+          <p class="slide-desc">亮温阈值如何影响对流组织度量，如何选择鲁棒阈值。</p>
+          <div class="slide-foot">
+            <span class="slide-comments"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>2 讨论</span>
+            <span class="slide-more">阅读 →</span>
+          </div>
+        </a>
+
+        <a class="slide-card" href="pages/thinking-packing-capacity.html">
+          <div class="slide-card-top">
+            <span class="slide-tag">台风频数</span>
+            <span class="slide-date">2026-06-18</span>
+          </div>
+          <h3>时空填充与台风的"承载力"</h3>
+          <p class="slide-desc">从"装箱问题"看热带大气的有限承载力。</p>
+          <div class="slide-foot">
+            <span class="slide-comments"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>1 讨论</span>
+            <span class="slide-more">阅读 →</span>
+          </div>
+        </a>
+
+        <a class="slide-card" href="pages/thinking-intensification.html">
+          <div class="slide-card-top">
+            <span class="slide-tag">台风特征</span>
+            <span class="slide-date">2026-05-30</span>
+          </div>
+          <h3>台风增强速率与持续时间的分解</h3>
+          <p class="slide-desc">把强度拆成增强速率与持续时间，看各自的气候响应。</p>
+          <div class="slide-foot">
+            <span class="slide-comments"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>0 讨论</span>
+            <span class="slide-more">阅读 →</span>
+          </div>
+        </a>
+
+        <a class="slide-card" href="pages/thinking-cold-wake.html">
+          <div class="slide-card-top">
+            <span class="slide-tag">台风特征</span>
+            <span class="slide-date">2026-05-09</span>
+          </div>
+          <h3>海洋冷尾迹与台风—海洋耦合</h3>
+          <p class="slide-desc">冷尾迹减弱如何影响台风增强与海气耦合。</p>
+          <div class="slide-foot">
+            <span class="slide-comments"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>0 讨论</span>
+            <span class="slide-more">阅读 →</span>
+          </div>
         </a>
       </div>
     </div>
@@ -165,6 +225,31 @@
       a.addEventListener('click', function () { document.getElementById('nav-menu').classList.remove('open'); });
     });
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // 横向滑动容器：支持鼠标拖动（拖动后不误触卡片链接）
+    document.querySelectorAll('.hscroll').forEach(function (el) {
+      var down = false, startX = 0, startLeft = 0, moved = false;
+      el.addEventListener('mousedown', function (e) {
+        down = true; moved = false;
+        startX = e.pageX; startLeft = el.scrollLeft;
+        el.classList.add('dragging');
+      });
+      window.addEventListener('mousemove', function (e) {
+        if (!down) return;
+        var dx = e.pageX - startX;
+        if (Math.abs(dx) > 4) moved = true;
+        if (moved) { e.preventDefault(); el.scrollLeft = startLeft - dx; }
+      });
+      window.addEventListener('mouseup', function () {
+        down = false;
+        el.classList.remove('dragging');
+      });
+      el.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', function (e) {
+          if (moved) { e.preventDefault(); moved = false; }
+        });
+      });
+    });
   </script>
 </body>
 </html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Full list of conference presentations by Yufeng Zhou.">
+  <title>Conferences · Yufeng Zhou</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+  <!-- 顶部导航（当前页 Activity 高亮） -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="nav-brand" href="../index.html">Yufeng&nbsp;Zhou</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-menu" id="nav-menu">
+        <a class="nav-link" href="research.html">Research</a>
+        <a class="nav-link" href="publications.html">Publications</a>
+        <a class="nav-link active" href="activity.html">Activity</a>
+        <a class="nav-link" href="thinking.html">Thinking</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 页头 -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Conferences &amp; Talks</h1>
+      <p class="page-desc">Full list of conference presentations, newest first.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       会议详情列表（按时间倒序）
+       说明：新增一条就复制一个 <article class="conf"> 整块，放到列表最前；
+       摘要 / slides 链接等细节在 conf-detail 里补充。
+       ============================================================ -->
+  <section class="section">
+    <div class="container">
+      <div class="conf-list">
+
+        <article class="conf" id="conf-202608">
+          <div class="conf-head">
+            <h3>基于信息熵的热带对流层级组织指数（HOI）及其在模式与观测中的应用</h3>
+            <span class="talk-kind">口头报告</span>
+          </div>
+          <p class="conf-meta">第八届全国中尺度气象学论坛（成都）· 2026-08</p>
+          <p class="conf-detail muted">详情待补充：可在此添加报告摘要、slides / 视频链接等。</p>
+        </article>
+
+        <article class="conf" id="conf-202512">
+          <div class="conf-head">
+            <h3>基于时空填充的全球台风年频数的模型</h3>
+            <span class="talk-kind">口头报告</span>
+          </div>
+          <p class="conf-meta">应用数学和人工智能方法与地球系统复杂性研究学术研讨会（北京）· 2025-12</p>
+          <p class="conf-detail muted">详情待补充：可在此添加报告摘要、slides / 视频链接等。</p>
+        </article>
+
+        <article class="conf" id="conf-202507">
+          <div class="conf-head">
+            <h3>The Role of Intensification Duration in Shaping Tropical Cyclone Lifetime Maximum Intensity Distribution</h3>
+            <span class="talk-kind">Oral</span>
+          </div>
+          <p class="conf-meta">AOGS 2025 Annual Meeting (Singapore) · 2025-07</p>
+          <p class="conf-detail muted">详情待补充：可在此添加报告摘要、slides / 视频链接等。</p>
+        </article>
+
+        <article class="conf" id="conf-202504">
+          <div class="conf-head">
+            <h3>基于时空填充的全球台风年频数的模型</h3>
+            <span class="talk-kind">口头报告</span>
+          </div>
+          <p class="conf-meta">第一届未来大气科学论坛（北京）· 2025-04</p>
+          <p class="conf-detail muted">详情待补充：可在此添加报告摘要、slides / 视频链接等。</p>
+        </article>
+
+        <article class="conf" id="conf-202411">
+          <div class="conf-head">
+            <h3>全球热带气旋频数的模型</h3>
+            <span class="talk-kind">口头报告</span>
+          </div>
+          <p class="conf-meta">第六届全国中尺度气象学论坛（珠海）· 2024-11</p>
+          <p class="conf-detail muted">详情待补充：可在此添加报告摘要、slides / 视频链接等。</p>
+        </article>
+
+        <article class="conf" id="conf-202405">
+          <div class="conf-head">
+            <h3>A Toy Model for the Global Annual Number of Tropical Cyclones</h3>
+            <span class="talk-kind talk-award">Best Student Poster Award</span>
+          </div>
+          <p class="conf-meta">36th AMS Conference on Hurricanes and Tropical Meteorology (Long Beach, USA) · Poster · 2024-05</p>
+          <p class="conf-detail muted">详情待补充：可在此添加报告摘要、slides / 视频链接等。</p>
+        </article>
+
+      </div>
+
+      <p><a class="hl" href="activity.html">← Back to Activity</a></p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year">2026</span> Yufeng Zhou ·
+        <a href="mailto:zyf21@mails.tsinghua.edu.cn">zyf21@mails.tsinghua.edu.cn</a></p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('nav-toggle').addEventListener('click', function () {
+      var m = document.getElementById('nav-menu');
+      var o = m.classList.toggle('open');
+      this.setAttribute('aria-expanded', o);
+    });
+    document.querySelectorAll('#nav-menu a').forEach(function (a) {
+      a.addEventListener('click', function () { document.getElementById('nav-menu').classList.remove('open'); });
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

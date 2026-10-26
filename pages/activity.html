@@ -38,54 +38,87 @@
     <div class="container">
 
       <!-- ============================================================
-           会议报告（按时间倒序，最新在前）
-           说明：新增一条就复制一个 <li class="talk"> 整块，放到列表最前。
+           会议报告：横向滑轨（可拖动），最新在前；点卡片跳详情
+           说明：新增一条就复制一个 <a class="slide-card"> 整块，放到最前，
+           并在 conferences.html 里补对应 <article class="conf"> 详情。
            ============================================================ -->
-      <h2 class="sub-title">Conferences &amp; Talks</h2>
-      <ul class="talk-list">
-        <li class="talk">
-          <div class="talk-main">
-            <p class="talk-title">基于信息熵的热带对流层级组织指数（HOI）及其在模式与观测中的应用</p>
-            <p class="talk-meta">第八届全国中尺度气象学论坛（成都）· 口头报告 · 2026-08</p>
+      <div class="section-title-row">
+        <h2 class="sub-title">Conferences &amp; Talks</h2>
+        <a class="view-all" href="conferences.html">全部会议 →</a>
+      </div>
+      <div class="hscroll">
+        <a class="slide-card" href="conferences.html#conf-202608">
+          <div class="slide-card-top">
+            <span class="slide-tag">口头报告</span>
+            <span class="slide-date">2026-08</span>
           </div>
-          <span class="talk-kind">Oral</span>
-        </li>
-        <li class="talk">
-          <div class="talk-main">
-            <p class="talk-title">基于时空填充的全球台风年频数的模型</p>
-            <p class="talk-meta">应用数学和人工智能方法与地球系统复杂性研究学术研讨会（北京）· 口头报告 · 2025-12</p>
+          <h3>基于信息熵的热带对流层级组织指数（HOI）及其在模式与观测中的应用</h3>
+          <p class="slide-desc">第八届全国中尺度气象学论坛（成都）</p>
+          <div class="slide-foot">
+            <span class="slide-more">查看详情 →</span>
           </div>
-          <span class="talk-kind">Oral</span>
-        </li>
-        <li class="talk">
-          <div class="talk-main">
-            <p class="talk-title">The Role of Intensification Duration in Shaping Tropical Cyclone Lifetime Maximum Intensity Distribution</p>
-            <p class="talk-meta">AOGS 2025 Annual Meeting (Singapore) · Oral Presentation · 2025-07</p>
+        </a>
+
+        <a class="slide-card" href="conferences.html#conf-202512">
+          <div class="slide-card-top">
+            <span class="slide-tag">口头报告</span>
+            <span class="slide-date">2025-12</span>
           </div>
-          <span class="talk-kind">Oral</span>
-        </li>
-        <li class="talk">
-          <div class="talk-main">
-            <p class="talk-title">基于时空填充的全球台风年频数的模型</p>
-            <p class="talk-meta">第一届未来大气科学论坛（北京）· 口头报告 · 2025-04</p>
+          <h3>基于时空填充的全球台风年频数的模型</h3>
+          <p class="slide-desc">应用数学和人工智能方法与地球系统复杂性研究学术研讨会（北京）</p>
+          <div class="slide-foot">
+            <span class="slide-more">查看详情 →</span>
           </div>
-          <span class="talk-kind">Oral</span>
-        </li>
-        <li class="talk">
-          <div class="talk-main">
-            <p class="talk-title">全球热带气旋频数的模型</p>
-            <p class="talk-meta">第六届全国中尺度气象学论坛（珠海）· 口头报告 · 2024-11</p>
+        </a>
+
+        <a class="slide-card" href="conferences.html#conf-202507">
+          <div class="slide-card-top">
+            <span class="slide-tag">Oral</span>
+            <span class="slide-date">2025-07</span>
           </div>
-          <span class="talk-kind">Oral</span>
-        </li>
-        <li class="talk">
-          <div class="talk-main">
-            <p class="talk-title">A Toy Model for the Global Annual Number of Tropical Cyclones</p>
-            <p class="talk-meta">36th AMS Conference on Hurricanes and Tropical Meteorology (Long Beach, USA) · Poster · 2024-05</p>
+          <h3>The Role of Intensification Duration in Shaping Tropical Cyclone Lifetime Maximum Intensity Distribution</h3>
+          <p class="slide-desc">AOGS 2025 Annual Meeting (Singapore)</p>
+          <div class="slide-foot">
+            <span class="slide-more">查看详情 →</span>
           </div>
-          <span class="talk-kind talk-award">Best Student Poster Award</span>
-        </li>
-      </ul>
+        </a>
+
+        <a class="slide-card" href="conferences.html#conf-202504">
+          <div class="slide-card-top">
+            <span class="slide-tag">口头报告</span>
+            <span class="slide-date">2025-04</span>
+          </div>
+          <h3>基于时空填充的全球台风年频数的模型</h3>
+          <p class="slide-desc">第一届未来大气科学论坛（北京）</p>
+          <div class="slide-foot">
+            <span class="slide-more">查看详情 →</span>
+          </div>
+        </a>
+
+        <a class="slide-card" href="conferences.html#conf-202411">
+          <div class="slide-card-top">
+            <span class="slide-tag">口头报告</span>
+            <span class="slide-date">2024-11</span>
+          </div>
+          <h3>全球热带气旋频数的模型</h3>
+          <p class="slide-desc">第六届全国中尺度气象学论坛（珠海）</p>
+          <div class="slide-foot">
+            <span class="slide-more">查看详情 →</span>
+          </div>
+        </a>
+
+        <a class="slide-card" href="conferences.html#conf-202405">
+          <div class="slide-card-top">
+            <span class="slide-tag">海报 · 获奖</span>
+            <span class="slide-date">2024-05</span>
+          </div>
+          <h3>A Toy Model for the Global Annual Number of Tropical Cyclones</h3>
+          <p class="slide-desc">36th AMS Conference on Hurricanes and Tropical Meteorology (Long Beach, USA)</p>
+          <div class="slide-foot">
+            <span class="slide-more">查看详情 →</span>
+          </div>
+        </a>
+      </div>
 
       <!-- ============================================================
            荣誉奖励
@@ -147,6 +180,31 @@
       a.addEventListener('click', function () { document.getElementById('nav-menu').classList.remove('open'); });
     });
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // 横向滑动容器：支持鼠标拖动（拖动后不误触卡片链接）
+    document.querySelectorAll('.hscroll').forEach(function (el) {
+      var down = false, startX = 0, startLeft = 0, moved = false;
+      el.addEventListener('mousedown', function (e) {
+        down = true; moved = false;
+        startX = e.pageX; startLeft = el.scrollLeft;
+        el.classList.add('dragging');
+      });
+      window.addEventListener('mousemove', function (e) {
+        if (!down) return;
+        var dx = e.pageX - startX;
+        if (Math.abs(dx) > 4) moved = true;
+        if (moved) { e.preventDefault(); el.scrollLeft = startLeft - dx; }
+      });
+      window.addEventListener('mouseup', function () {
+        down = false;
+        el.classList.remove('dragging');
+      });
+      el.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', function (e) {
+          if (moved) { e.preventDefault(); moved = false; }
+        });
+      });
+    });
   </script>
 </body>
 </html>
