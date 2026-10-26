@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ea580c"/>
+      <stop offset="1" stop-color="#dc2626"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#g)"/>
+  <g fill="none" stroke="#ffffff" stroke-opacity="0.4" stroke-width="3">
+    <circle cx="400" cy="240" r="42"/>
+    <circle cx="400" cy="240" r="88"/>
+    <circle cx="400" cy="240" r="132"/>
+    <circle cx="400" cy="240" r="176"/>
+  </g>
+  <path d="M400 240 C 410 200, 450 200, 452 240 C 454 285, 400 290, 392 240 C 382 180, 470 175, 490 240 C 515 320, 380 330, 340 240" fill="none" stroke="#ffffff" stroke-opacity="0.55" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="400" cy="240" r="16" fill="#ffffff" fill-opacity="0.85"/>
+  <text x="400" y="428" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="38" font-weight="700" fill="#ffffff">TC Characteristics</text>
+  <text x="400" y="464" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#ffffff" fill-opacity="0.85">Intensity · Ocean · Motion</text>
+</svg>

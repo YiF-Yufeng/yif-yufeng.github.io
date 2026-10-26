@@ -36,80 +36,12 @@
 
   <!-- ============================================================
        思考话题（论坛式列表：题目 / 简介 / 创建时间 / 互动留言数）
-       说明：新增一个话题就复制一个 <a class="thread"> 整块，
-       并新建对应的 thinking-xxx.html 页（含讨论区）。
+       数据来自 thinking-data.js（单一数据源），由下方脚本渲染，
+       与首页保持一致。新增话题请改 thinking-data.js。
        ============================================================ -->
   <section class="section">
     <div class="container">
-      <div class="thread-list">
-
-        <a class="thread" href="thinking-tc-frequency.html">
-          <div class="thread-main">
-            <h3 class="thread-title">TC frequency 的讨论</h3>
-            <p class="thread-desc">全球台风年频数为何稳定在 ~90 个？时空填充与承载力视角。</p>
-          </div>
-          <div class="thread-meta">
-            <span class="thread-comments"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>5</span>
-            <span class="thread-date">2026-08-12</span>
-          </div>
-        </a>
-
-        <a class="thread" href="thinking-hoi.html">
-          <div class="thread-main">
-            <h3 class="thread-title">关于 HOI 对流组织程度的讨论</h3>
-            <p class="thread-desc">用信息熵量化对流组织：HOI 的构建与解读。</p>
-          </div>
-          <div class="thread-meta">
-            <span class="thread-comments"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>3</span>
-            <span class="thread-date">2026-07-28</span>
-          </div>
-        </a>
-
-        <a class="thread" href="thinking-threshold.html">
-          <div class="thread-main">
-            <h3 class="thread-title">关于识别对流系统阈值选择的讨论</h3>
-            <p class="thread-desc">亮温阈值如何影响对流组织度量，如何选择鲁棒阈值。</p>
-          </div>
-          <div class="thread-meta">
-            <span class="thread-comments"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>2</span>
-            <span class="thread-date">2026-07-05</span>
-          </div>
-        </a>
-
-        <a class="thread" href="thinking-packing-capacity.html">
-          <div class="thread-main">
-            <h3 class="thread-title">时空填充与台风的"承载力"</h3>
-            <p class="thread-desc">从"装箱问题"看热带大气的有限承载力。</p>
-          </div>
-          <div class="thread-meta">
-            <span class="thread-comments"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>1</span>
-            <span class="thread-date">2026-06-18</span>
-          </div>
-        </a>
-
-        <a class="thread" href="thinking-intensification.html">
-          <div class="thread-main">
-            <h3 class="thread-title">台风增强速率与持续时间的分解</h3>
-            <p class="thread-desc">把强度拆成增强速率与持续时间，看各自的气候响应。</p>
-          </div>
-          <div class="thread-meta">
-            <span class="thread-comments"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>0</span>
-            <span class="thread-date">2026-05-30</span>
-          </div>
-        </a>
-
-        <a class="thread" href="thinking-cold-wake.html">
-          <div class="thread-main">
-            <h3 class="thread-title">海洋冷尾迹与台风—海洋耦合</h3>
-            <p class="thread-desc">冷尾迹减弱如何影响台风增强与海气耦合。</p>
-          </div>
-          <div class="thread-meta">
-            <span class="thread-comments"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>0</span>
-            <span class="thread-date">2026-05-09</span>
-          </div>
-        </a>
-
-      </div>
+      <div class="thread-list" id="thinking-threads"></div>
     </div>
   </section>
 
@@ -120,7 +52,11 @@
     </div>
   </footer>
 
+  <script src="../thinking-data.js"></script>
   <script>
+    // 渲染论坛式话题列表（单一数据源，与首页同步）
+    renderThinkingThreads(document.getElementById('thinking-threads'), '');
+
     document.getElementById('nav-toggle').addEventListener('click', function () {
       var m = document.getElementById('nav-menu');
       var o = m.classList.toggle('open');

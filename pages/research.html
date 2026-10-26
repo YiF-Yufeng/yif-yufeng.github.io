@@ -35,42 +35,63 @@
   </section>
 
   <!-- ============================================================
-       研究主题总览：每个主题点击进入详情页
-       说明：新增一个主题就复制一个 <a class="module-card"> 整块，
-       并新建对应的 research-xxx.html 详情页。
+       研究主题：大卡片（图片 + 简介），点击进入详情页
+       说明：新增一个主题就复制一个 <a class="research-card"> 整块，
+       配一张占位图放 images/，并新建对应的 research-xxx.html 详情页。
        ============================================================ -->
   <section class="section">
     <div class="container">
-      <div class="module-grid">
+      <div class="research-list">
 
-        <a class="module-card" href="research-packing.html">
-          <h3>A Spatiotemporal Packing Framework for Tropical Cyclone Frequency <span class="arrow">→</span></h3>
-          <p>
-            Proposes a framework showing that global tropical cyclone (TC) frequency emerges from
-            the spatiotemporal packing and self-organization of the tropical climate system under
-            finite environmental constraints — linking spatial convective organization, genesis
-            interval statistics, and TC lifecycle effects.
-          </p>
+        <a class="research-card" href="research-packing.html">
+          <div class="research-card-img">
+            <img src="../images/research-packing.svg" alt="Spatiotemporal packing framework illustration">
+          </div>
+          <div class="research-card-body">
+            <span class="card-tag">Dissertation</span>
+            <h3>A Spatiotemporal Packing Framework for Tropical Cyclone Frequency</h3>
+            <p>
+              Proposes a framework showing that global tropical cyclone (TC) frequency emerges from
+              the spatiotemporal packing and self-organization of the tropical climate system under
+              finite environmental constraints — linking spatial convective organization, genesis
+              interval statistics, and TC lifecycle effects.
+            </p>
+            <span class="research-more">阅读详情 →</span>
+          </div>
         </a>
 
-        <a class="module-card" href="research-hoi.html">
-          <h3>Information-Theoretic Quantification of Tropical Convective Organization <span class="arrow">→</span></h3>
-          <p>
-            Develops an entropy-based Hierarchical Organization Index (HOI) and a dual-metric
-            framework integrating size hierarchy and spatial clustering to quantify convective
-            organization. Identifies an adaptive structure-optimal infrared brightness temperature
-            threshold and its long-term cooling trend.
-          </p>
+        <a class="research-card" href="research-hoi.html">
+          <div class="research-card-img">
+            <img src="../images/research-hoi.svg" alt="Convective organization illustration">
+          </div>
+          <div class="research-card-body">
+            <span class="slide-tag">Methods</span>
+            <h3>Information-Theoretic Quantification of Tropical Convective Organization</h3>
+            <p>
+              Develops an entropy-based Hierarchical Organization Index (HOI) and a dual-metric
+              framework integrating size hierarchy and spatial clustering, identifying an adaptive
+              structure-optimal infrared brightness temperature threshold and its long-term cooling
+              trend.
+            </p>
+            <span class="research-more">阅读详情 →</span>
+          </div>
         </a>
 
-        <a class="module-card" href="research-tc-change.html">
-          <h3>Climate-Driven Changes in Tropical Cyclone Characteristics <span class="arrow">→</span></h3>
-          <p>
-            Reveals changes in TC intensity, air-sea interaction, and motion variability by
-            decomposing lifetime maximum intensity into intensification rate and duration,
-            quantifying the weakening of TC-induced ocean cooling, and identifying increasing
-            track curvature.
-          </p>
+        <a class="research-card" href="research-tc-change.html">
+          <div class="research-card-img">
+            <img src="../images/research-tc-change.svg" alt="Tropical cyclone characteristics illustration">
+          </div>
+          <div class="research-card-body">
+            <span class="slide-tag">Climate Response</span>
+            <h3>Climate-Driven Changes in Tropical Cyclone Characteristics</h3>
+            <p>
+              Reveals changes in TC intensity, air-sea interaction, and motion variability by
+              decomposing lifetime maximum intensity into intensification rate and duration,
+              quantifying the weakening of TC-induced ocean cooling, and identifying increasing
+              track curvature.
+            </p>
+            <span class="research-more">阅读详情 →</span>
+          </div>
         </a>
 
       </div>
