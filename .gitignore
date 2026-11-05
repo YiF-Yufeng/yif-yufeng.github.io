@@ -1,0 +1,7 @@
+# meta.json is generated at deploy time by GitHub Actions (scripts/build-meta.js).
+# A locally generated copy would only go stale, so keep it out of git.
+assets/data/meta.json
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
