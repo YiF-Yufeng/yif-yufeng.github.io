@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Yufeng Zhou (周宇峰) — Ph.D. candidate in Atmospheric Science at Tsinghua University, studying tropical cyclone frequency, climate dynamics, and convective organization.">
+  <meta name="author" content="Yufeng Zhou">
+  <title>Yufeng Zhou | Ph.D. Candidate in Atmospheric Science</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<!-- ============================================================
+     首页 —— 这是一个"壳"文件，不包含任何内容文字。
+     要改内容请编辑：
+       content/profile.js   姓名 / 头衔 / 简介 / 教育经历 / 联系方式
+       content/thinking.js  Thinking 卡片（自动取最新几篇）
+     data-page="home"：告诉 pages.js 按首页方式渲染
+     data-root=""     ：本文件位于仓库根目录（子页面为 "../"）
+     ============================================================ -->
+<body data-page="home" data-root="">
+
+  <div id="site-header"></div>
+
+  <!-- HERO：姓名 / 照片 / 头衔 / 联系方式（由 pages.js 填充） -->
+  <section class="hero" id="top">
+    <div class="container hero-inner" id="hero"></div>
+  </section>
+
+  <!-- ABOUT：简介 + 教育经历 -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">About</h2>
+      <div id="bio"></div>
+      <h3 class="sub-title">Education</h3>
+      <div class="edu-list" id="education"></div>
+    </div>
+  </section>
+
+  <!-- THINKING：最新文章横向卡片 -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-title-row">
+        <h2 class="section-title">Thinking</h2>
+        <a class="view-all" href="pages/thinking.html">View all →</a>
+      </div>
+      <div class="hscroll" id="thinking-cards"></div>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+
+  <!-- 数据（content/）→ 公共逻辑（core.js）→ 页面渲染（pages.js），顺序不能变 -->
+  <script src="content/site.js"></script>
+  <script src="content/profile.js"></script>
+  <script src="content/thinking.js"></script>
+  <script src="assets/js/core.js"></script>
+  <script src="assets/js/pages.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conferences, honors, and academic service of Yufeng Zhou.">
+  <title>Activity · Yufeng Zhou</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<!-- 壳文件：会议 / 学术服务 / 荣誉 都来自 content/activity.js -->
+<body data-page="activity" data-root="../">
+
+  <div id="site-header"></div>
+
+  <section class="page-header">
+    <div class="container">
+      <h1>Activity</h1>
+      <p class="page-desc" id="page-desc"></p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+
+      <!-- 会议报告：横向滑轨，点卡片跳到 conferences.html 的对应条目 -->
+      <div class="section-title-row">
+        <h2 class="sub-title">Conferences &amp; Talks</h2>
+        <a class="view-all" href="conferences.html">All talks →</a>
+      </div>
+      <div class="hscroll" id="conf-cards"></div>
+
+      <!-- 学术服务 -->
+      <h2 class="sub-title">Academic Service</h2>
+      <ul class="service-list" id="service-list"></ul>
+
+      <!-- 荣誉奖励：纵向滚动容器 -->
+      <h2 class="sub-title">Honors &amp; Awards</h2>
+      <div class="vscroll">
+        <ul class="award-list" id="honor-list"></ul>
+      </div>
+
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+
+  <script src="../content/site.js"></script>
+  <script src="../content/profile.js"></script>
+  <script src="../content/activity.js"></script>
+  <script src="../assets/js/core.js"></script>
+  <script src="../assets/js/pages.js"></script>
+</body>
+</html>
