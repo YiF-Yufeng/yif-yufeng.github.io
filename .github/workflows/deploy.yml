@@ -1,0 +1,68 @@
+# ============================================================
+# .github/workflows/deploy.yml —— 自动部署到 GitHub Pages
+# ------------------------------------------------------------
+# 每次运行：先执行 scripts/build-meta.js 生成 assets/data/meta.json
+#（文章日期 + 评论数），再把整个仓库作为静态站点发布到 GitHub Pages。
+#
+# 触发时机：
+#   - push 到 main：内容有更新
+#   - discussion / discussion_comment：有人在评论区发言 → 评论数即时刷新
+#   - 每天定时一次：兜底
+#   - workflow_dispatch：在 GitHub 网页 Actions 页手动点 "Run workflow"
+#
+# ★ 仓库 Settings → Pages → Source 必须选 "GitHub Actions"（而不是 Deploy from a branch）。
+# ★ 不需要配置任何 secret，GITHUB_TOKEN 由 GitHub 自动提供。
+# ============================================================
+name: Deploy site
+
+on:
+  push:
+    branches: [main]
+  discussion:
+    types: [created, edited, deleted]
+  discussion_comment:
+    types: [created, edited, deleted]
+  schedule:
+    - cron: '23 3 * * *'   # 每天 UTC 03:23（北京时间 11:23）
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  discussions: read
+  pages: write
+  id-token: write
+
+# 同一时间只跑一个部署；新的触发会取代排队中的旧任务
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout (full history, needed for post dates)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Generate assets/data/meta.json
+        run: node scripts/build-meta.js
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
