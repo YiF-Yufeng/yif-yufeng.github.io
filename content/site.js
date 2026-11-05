@@ -33,9 +33,9 @@ var SITE = {
      - termPrefix：每篇文章对应的 Discussion 标题前缀，最终标题形如 "thinking/tc-frequency"。
        ★ 部署后请勿更改，否则已有评论会与文章脱钩。 */
   giscus: {
-    repoId:     'REPLACE_WITH_REPO_ID',
+    repoId:     'R_kgDOVXhUlg',
     category:   'Announcements',
-    categoryId: 'REPLACE_WITH_CATEGORY_ID',
+    categoryId: 'DIC_kwDOVXhUls4DJqRF',
     termPrefix: 'thinking/'
   },
 
