@@ -48,38 +48,20 @@ var THINKING = {
     {
       slug:    'tc-frequency',
       title:   'Why does the globe produce about 90 tropical cyclones a year?',
-      summary: 'On the remarkable stability of the global annual TC count, viewed through spatiotemporal packing and a finite carrying capacity.',
+      summary: 'Viewed through a spatiotemporal packing framework',
       tags:    ['tc-frequency']
     },
     {
       slug:    'hoi',
-      title:   'Measuring convective organization with information entropy',
-      summary: 'How the Hierarchical Organization Index (HOI) is constructed, what it captures, and how to interpret it.',
+      title:   'How to understand the convective organization?',
+      summary: 'Measuring convective organization with information entropy: Hierarchical Organization Index (HOI)',
       tags:    ['organization', 'methods']
     },
     {
       slug:    'threshold',
-      title:   'Choosing a brightness-temperature threshold for convective systems',
-      summary: 'How the infrared threshold shapes organization metrics, and how to pick one that is robust.',
+      title:   'How to choose a brightness-temperature threshold for identifying convective systems',
+      summary: 'Defining structure-optimal threshold at maximum size entropy',
       tags:    ['organization', 'methods']
-    },
-    {
-      slug:    'packing-capacity',
-      title:   'Spatiotemporal packing and the “carrying capacity” for tropical cyclones',
-      summary: 'A bin-packing view of the finite capacity of the tropical atmosphere.',
-      tags:    ['tc-frequency']
-    },
-    {
-      slug:    'intensification',
-      title:   'Decomposing TC intensity into intensification rate and duration',
-      summary: 'Splitting lifetime maximum intensity into a rate and a duration, and looking at their separate climate responses.',
-      tags:    ['tc-change']
-    },
-    {
-      slug:    'cold-wake',
-      title:   'Ocean cold wakes and TC–ocean coupling',
-      summary: 'How shrinking cold wakes feed back on intensification and air–sea coupling.',
-      tags:    ['tc-change']
     }
   ]
 };
